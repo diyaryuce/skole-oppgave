@@ -13,37 +13,56 @@
 <body>
 
     <header class="">
-        <nav>
-
-            <img src="public/logo/bergen_regnbyen_as.jpeg" alt="bergen as " width="150" height="150">
-            
-         
-            <a href="index.html">hjem</a>
-            <a href="klaer.html">klær</a>
-            <a href="hus.html">hus</a>
-            <a href="om-oss.html">om oss</a>
-            <a href="kontakt.html">kontakt</a>
-        </nav>
+        <div class="container header-nav" >
+            <!---Logo ---->
+            <div>
+                <img src="public/logo/bergen_regnbyen_as.jpeg" alt="bergen as " width="150" height="150">
+            </div>
+             <!--- Nav ---->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a class="navlink" href="index.html">hjem</a></li>
+                    <li><a class="navlink" href="klaer.html">klær</a></li>
+                    <li><a class="navlink" href="hus.html">hus</a></li>
+                    <li><a class="navlink" href="om-oss.html">om oss</a></li>
+                    <li><a class="navlink" href="kontakt.html">kontakt</a></li>
+                </ul>
+            </nav>  
+        </div>        
     </header>
 
 
-<div>
+<main>
 
-    dette er om oss
-</div>
+    <section style="background-color: red;" >
+        outside the container
+        <div class="container" style="background-color: blue;">
+            
+            inside the container
+        </div>
+    </section>
+</main>
+
+<section style="height: 800px; background-color: red;">
+
+   <div class="container" style="background-color: blue;">
+            
+            inside the container
+        </div>
+</section>
 
    
-    <footer>
-  <div class="logo">
-    <img src="public/img/logo.png" alt="RB Logo" width="150"/>
-  </div>
-  <div>
-    <ul>
-      <li><a href="#">Kontakt oss</a></li>
-      <li><a href="#">FAQ</a></li>
-    </ul>
-</div>
-  <small>© 2025 Regnbyen Bergen A/S. All rights NOT reserved lol.</small>
+<footer>
+    <div class="logo">
+        <img src="public/img/logo.png" alt="RB Logo" width="150"/>
+    </div>
+    <div>
+        <ul>
+        <li><a href="#">Kontakt oss</a></li>
+        <li><a href="#">FAQ</a></li>
+        </ul>
+    </div>
+    <small>© 2025 Regnbyen Bergen A/S. All rights NOT reserved lol.</small>
 </footer>
 
 </body>

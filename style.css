@@ -5,10 +5,28 @@
     font-family: Arial, sans-serif;
 }
 
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1264px;
+    margin: auto;
+    width: 100%;
+}
+
 
 /* ------------ Nav bar ----------*/
 
-nav {
+
+
+.header-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+} 
+
+.nav-menu {
     width: 70%;
     min-width: 600px;
     height: 16vh;
@@ -16,9 +34,11 @@ nav {
     justify-content: space-around;
     align-items:center;
     margin: auto;
+    
 
 }
-nav a {
+
+.navlink {
     position: relative;
     text-decoration: none;
     font-size: 30px;
@@ -83,11 +103,7 @@ h1 {
     p {
       margin-bottom: 1em;
     }
-    main {
-      max-width: 1500px;
-      margin: 0 auto;
-      padding: 75px 10px;
-    }
+   
     section {
       margin-bottom: 1.5em;
     }

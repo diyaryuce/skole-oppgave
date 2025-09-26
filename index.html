@@ -13,17 +13,22 @@
 <body>
 
     <header class="">
-        <nav>
-
-            <img src="public/logo/bergen_regnbyen_as.jpeg" alt="bergen as " width="150" height="150">
-            
-         
-            <a href="index.html">hjem</a>
-            <a href="klaer.html">klær</a>
-            <a href="hus.html">hus</a>
-            <a href="om-oss.html">om oss</a>
-            <a href="kontakt.html">kontakt</a>
-        </nav>
+        <div class="container header-nav" >
+            <!---Logo ---->
+            <div>
+                <img src="public/logo/bergen_regnbyen_as.jpeg" alt="bergen as " width="150" height="150">
+            </div>
+             <!--- Nav ---->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a class="navlink" href="index.html">hjem</a></li>
+                    <li><a class="navlink" href="klaer.html">klær</a></li>
+                    <li><a class="navlink" href="hus.html">hus</a></li>
+                    <li><a class="navlink" href="om-oss.html">om oss</a></li>
+                    <li><a class="navlink" href="kontakt.html">kontakt</a></li>
+                </ul>
+            </nav>  
+        </div>        
     </header>
 
 
@@ -32,7 +37,8 @@
    <main>
 
   <section class="flex">
-    <div>
+    <div class="container">
+        <div>
       <h1>Klær og skotøy i Bergen</h1>
       <p>Bergen er kjent for å være en av Europas mest regnfulle byer, med mer enn 200 regndager i året. Dette stiller spesielle krav til hvordan man kler seg, både til hverdags og når man skal på tur.</p>
 	  <p>Riktig bekledning handler ikke bare om komfort, men også om helse, praktisk bruk og økonomi.</p>
@@ -42,20 +48,23 @@
     </figure>
   </section>
 
-  <div>
-    <figure>
-      <img src="public/img/brd.png" width="1520" height="750" alt="" />
-    </figure>
+  <div class="container">
+
+      <img src="public/img/brd.png" style="width: 100%;" alt="" />
+   
   </div>
 
-  <section class="flex">
-    <figure>
-      <img src="public/img/bryggen.png" width="750"  alt="" class="rightpic"/>
+  <section class="flex" style="background-color: blueviolet;">
+    <div class="container">
+
+        <figure>
+      <img src="public/img/bryggen.png" width="750px"  alt="" class="rightpic"/>
     </figure>
     <div>
       <h2>Klima og værforhold i Bergen</h2>
       <p>Nedbøren i Bergen kommer ofte i form av regn, men også som yr og lett duskregn som kan vare i timevis. Ofte følger vinden med, og når regnet piskes sidelengs blir paraplyer mer til hinder enn til hjelp. Klimaet preges også av store variasjoner i temperatur: sommeren kan være mild, men fortsatt våt, mens vinteren ofte gir en uforutsigbar blanding av regn, sludd og snø.</p>
 	  <p>Disse forholdene gjør at man må tenke mer helhetlig når man velger klær. De bør ikke bare være vanntette, men også pustende, vindtette og tilpasset raske værskifter i et klima med høy luftfuktighet.</p>
+    </div>
     </div>
   </section>
 
@@ -89,6 +98,7 @@
         <tr><td>Regnbukse</td><td>Lenger uteopphold, pendling</td><td>Vask og impregner ved behov</td><td>Middels</td></tr>
       </tbody>
     </table>
+    </div>
   </section>
 
   <section class="col-3">
