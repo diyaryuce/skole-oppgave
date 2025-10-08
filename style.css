@@ -1,197 +1,309 @@
+/* ------------------------------
+   Reset & grunnoppsett
+---------------------------------*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-li {
-    list-style: none;
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f9f9f9;
+}
+
+/* Tilgjengelighetssnarvei */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+    .skip-link:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0.5rem;
+        background: #222;
+        color: #fff;
+        z-index: 1000;
+    }
+
+/* ------------------------------
+   Globale containere
+---------------------------------*/
 .container {
-    max-width: 1264px;
-    margin: auto;
-    width: 100%;
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
+/* ------------------------------
+   HEADER
+---------------------------------*/
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* over hero-bildet */
+    background: #fff; /* solid bakgrunn så tekst ikke skinner gjennom */
+    border-bottom: 1px solid #ddd;
+}
 
-/* ------------ Nav bar ----------*/
-
-
-
-.header-nav {
-    position: relative;
+.header-inner {
     display: flex;
     justify-content: space-between;
-} 
-
-.nav-menu {
-    width: 70%;
-    min-width: 600px;
-    height: 16vh;
-    display: flex;
-    justify-content: space-around;
-    align-items:center;
-    margin: auto;
-    
-
+    align-items: center;
+    padding: 1rem 0;
 }
 
-.navlink {
-    position: relative;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0066cc;
     text-decoration: none;
-    font-size: 30px;
-    font-family: sans-serif;
-    text-transform: capitalize;
-    color: black;
-    padding: 0 10px;
 }
-a::before {
-    content: '';
-    position: absolute;
-    width: 0%;
-    left: 0;
-    height: 3px;
-    background-color:darkolivegreen;
-    bottom: -8px;
-    transition: 0.25s;
 
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
 }
-a:hover {
-    color: darkgrey;
 
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
 }
-a:hover::before {
+
+    .main-nav a.active,
+    .main-nav a:hover {
+        color: #0066cc;
+    }
+
+/* Burgerknapp skjult desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* ------------------------------
+   HERO
+---------------------------------*/
+/* --- Hero med bakgrunnsbilde --- */
+.hero {
+    position: relative;
+    padding: calc(5rem + var(--header-h, 64px)) 0 5rem;
+    background: url("images/hero-aktiviteter.jpg") center/cover no-repeat;
+    color: #fff;
+}
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.25));
+    }
+
+/* VIKTIG: bruk samme containerbredde og VENSTRE-justering som header/kort */
+.hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start; /* <-- flytt innholdet til venstre */
+    text-align: left; /* <-- venstre-tekst i stedet for senter */
+    row-gap: 1rem;
+}
+
+.hero-text {
+    max-width: 60ch;
+}
+
+    .hero-text h1 {
+        margin-bottom: .5rem;
+    }
+
+/* Skjul evt. hero-bildet i HTML når bakgrunn brukes */
+.hero-media {
+    display: none;
+}
+
+/* På smale skjermer kan du sentrere igjen om du vil */
+@media (max-width: 700px) {
+    .hero-inner {
+        justify-items: center;
+        text-align: center;
+    }
+}
+
+
+
+/* ------------------------------
+   KORT / GRID
+---------------------------------*/
+.card-grid {
+    margin: 4rem auto;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-media img {
     width: 100%;
-
+    height: 180px;
+    object-fit: cover;
 }
 
+.card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
 
-/* ------------ END OF Nav bar ----------*/
-
-
-/* ----------------- */
-
-h1 {
-      margin-top: 0;
-	  font-size: 2em;
-	  text-align: center;
-    }
-	  h2 {
-      margin-top: 50px;
-	    margin-left: -25px;
-	    font-size: 1.25em;
-	    text-align: center;
-    }
-	  h3 {
-        margin-top: 50px;
-	    font-size: 1.5em;
-	    text-align: center;
-	  }
-	  h4 {
-      margin-top: 50px;
-	    font-size: 1.5em;
-	    text-align: center;
-	  }
-	  h5 {
-      margin-top: 80px;
-	  margin-left: 0px;
-	  font-size: 1.5em;
-	  text-align: center;
-	  }
-    p {
-      margin-bottom: 1em;
-    }
-   
-    section {
-      margin-bottom: 1.5em;
-    }
-    figure {
-      margin: 1.5em 0;
-      text-align: center;
-    }
-    figcaption {
-      font-size: 0.9em;
-      margin-top: 0.3em;
+    .card-body h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
     }
 
-     /* tabell */
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin: 1.5em 0;
-    }
-    th, td {
-      border: 1px solid #000;
-      padding: 8px;
-      text-align: left;
-    }
-    caption {
-      margin-bottom: 0.5em;
-      font-weight: bold;
+    .card-body p {
+        font-size: 0.95rem;
+        color: #555;
+        flex-grow: 1;
     }
 
-    /* layout */
-    .flex {
-      display: flex;
-      gap: 1.5em;
-      align-items: flex-start;
-    }
-	  figure img {
-	    display: block;
-	  }
-    .flex figure {
-      margin: 0;
-    }
-	  .flex img.leftpic {
-	    margin-left: 30px;
-	    margin-top: 0px;
-	  }
-	  .flex img.rightpic {
-	    margin-left: 0px;
-	    margin-top: 65px;
-	  }
-	  .flex img.midpic {
-	    margin-left: 30px;
-	   margin-top: 60px;
-	  }
-    .col-3 {
-      display: flex;
-      gap: 1.5em;
-	    font-size: 0.75em;
-    }
-    .col-3 > div {
-      flex: 1;
-    }
-	  .centered {
-	    display: inline-block;
-	    text-align: left;
-	    margin-left: 225px;
-	    margin-top: -20px;
-	    list-style-position: inside;
-	    font-size: 30px;
-	  }
-	  .pee {
-	    margin-top: -25px;
-  	}
-	  .peetwo {
-	   margin-top: 0px;
-	  }
-    .copyright {
-      flex-basis: 100%;
-      text-align: center;
-      margin-top: 1em;
-      font-size: 0.9em;
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.btn,
+.btn-link {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+.btn {
+    background: #0066cc;
+    color: #fff;
+}
+
+    .btn:hover {
+        background: #004c99;
     }
 
-/* ---------- Footer ------------ */
+.btn-link {
+    color: #0066cc;
+}
 
-footer {
-      display: flex;
-	  gap: 75px;
-      justify-content: center;
-      align-items: center;
-      padding: 16px 32px;
-      background: #fff;
+    .btn-link:hover {
+        text-decoration: underline;
     }
+
+/* ======== KORTBILDER ======== */
+.card-media {
+    aspect-ratio: 16 / 9; /* alle bilder får samme bredde/høydeforhold */
+    overflow: hidden; /* klipper alt som stikker utenfor */
+    border-bottom: 1px solid #eee;
+}
+
+    .card-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* gjør at bildet fyller boksen pent */
+        display: block;
+    }
+
+
+/* ------------------------------
+   FOOTER
+---------------------------------*/
+.site-footer {
+    background: #222;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+    .footer-inner ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .footer-inner a {
+        color: #eee;
+        text-decoration: none;
+    }
+
+        .footer-inner a:hover {
+            text-decoration: underline;
+        }
+
+/* ------------------------------
+   RESPONSIVT DESIGN
+---------------------------------*/
+@media (max-width: 900px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .grid-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav {
+        display: none; /* du kan endre til burger hvis ønsket */
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: 1px solid #0066cc;
+        padding: 0.5rem;
+        border-radius: 4px;
+        color: #0066cc;
+    }
+
+    .grid-row {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+}
