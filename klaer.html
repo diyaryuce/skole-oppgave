@@ -3,53 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Regnbyen Bergen AS</title>
+  <title>Klær og sko - Regnbyen Bergen AS</title>
 
+  <!-- Felles CSS -->
+  <link rel="stylesheet" href="generellstyle.css">
 
-  <!--Stylesheet CSS-->
-  <link rel="stylesheet" type="text/css" href="style.css" />
-
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="">
-        <div class="container header-nav" >
-            <!---Logo ---->
-            <div>
-                <img src="public/logo/bergen_regnbyen_as.jpeg" alt="bergen as " width="150" height="150">
-            </div>
-             <!--- Nav ---->
-            <nav>
-                <ul class="nav-menu">
-                    <li><a class="navlink" href="index.html">hjem</a></li>
-                    <li><a class="navlink" href="klaer.html">klær</a></li>
-                    <li><a class="navlink" href="hus.html">hus</a></li>
-                    <li><a class="navlink" href="om-oss.html">om oss</a></li>
-                    <li><a class="navlink" href="kontakt.html">kontakt</a></li>
-                </ul>
-            </nav>  
-        </div>        
-    </header>
+  <!-- HEADER / HOVEDMENY -->
+<header>
+  <nav class="navbar">
+    <img src="images/logo1.png.jpeg" alt="Bergen AS logo" class="logo">
+
+    <div class="nav-links">
+      <a href="BergenRegnbyhovedside2.HTML" class="nav-btn">hjem</a>
+      <a href="klaer.html" class="nav-btn active">klær</a>
+      <a href="hus2.html" class="nav-btn">hus</a>
+      <a href="OmRegnbyen.html" class="nav-btn">om oss</a>
+      <a href="kontakt.html" class="nav-btn">kontakt</a>
+    </div>
+  </nav>
+</header>
 
 
-<div>
+  <!-- MAIN CONTENT -->
+  <main>
 
-    dette er om oss
-</div>
+    <section class="flex">
+      <div class="container">
+        <h1>Klær og skotøy i Bergen</h1>
+        <p>Bergen er kjent for å være en av Europas mest regnfulle byer, med mer enn 200 regndager i året. Dette stiller spesielle krav til hvordan man kler seg, både til hverdags og når man skal på tur.</p>
+        <p>Riktig bekledning handler ikke bare om komfort, men også om helse, praktisk bruk og økonomi.</p>
+      </div>
+      <figure>
+        <img src="public/img/regngutt.png" width="950" alt="" class="leftpic"/>
+      </figure>
+    </section>
 
-   
-    <footer>
-  <div class="logo">
-    <img src="public/img/logo.png" alt="RB Logo" width="150"/>
+    <div class="container">
+      <img src="public/img/brd.png" style="width: 100%;" alt="" />
+    </div>
+
+    <section class="flex" style="background-color: blueviolet;">
+      <div class="container">
+        <figure>
+          <img src="public/img/bryggen.png" width="750px"  alt="" class="rightpic"/>
+        </figure>
+        <div>
+          <h2>Klima og værforhold i Bergen</h2>
+          <p>Nedbøren i Bergen kommer ofte i form av regn, men også som yr og lett duskregn som kan vare i timevis. Ofte følger vinden med, og når regnet piskes sidelengs blir paraplyer mer til hinder enn til hjelp. Klimaet preges også av store variasjoner i temperatur: sommeren kan være mild, men fortsatt våt, mens vinteren ofte gir en uforutsigbar blanding av regn, sludd og snø.</p>
+          <p>Disse forholdene gjør at man må tenke mer helhetlig når man velger klær. De bør ikke bare være vanntette, men også pustende, vindtette og tilpasset raske værskifter i et klima med høy luftfuktighet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h4>Sjekkeliste - basisutstyr</h4>
+      <ul class="centered">
+        <li>Vanntett jakke med hette (skalljakke anbefales fremfor enkel regnjakke)</li>
+        <li>Vanntette sko eller støvler tilpasset både bybruk og natur</li>
+        <li>Regnbukse eller overtrekks bukse til lengre opphold ute</li>
+        <li>Sekk med regntrekk for å beskytte bøker, PC og personlige eiendeler</li>
+        <li>Ekstra sokker og et ekstra skift til uforutsette situasjoner</li>
+      </ul>
+    </section>
+
+    <section class="flex">
+      <div>
+        <h2>Sammenligning av vanlige regnplagg</h2>
+        <p>Tabellen viser hvordan de ulike plaggene har forskjellige bruksområder. Mange kombinerer skalljakke og regnbukse til daglig bruk, mens støvler og gamasjer er mest aktuelle for friluftsliv.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Plagg</th><th>Bruksområde</th><th>Vedlikehold</th><th>Prisnivå</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Skalljakke</td><td>By og tur</td><td>Impregneres 2-3 ganger per år</td><td>Middels–høyt</td></tr>
+          <tr><td>Regnponcho</td><td>Sykkel, korte turer</td><td>Tørkes raskt, unngå varme</td><td>Lavt</td></tr>
+          <tr><td>Støvler</td><td>By og natur</td><td>Vask og smøring jevnlig</td><td>Middels</td></tr>
+          <tr><td>Gamasjer</td><td>Tur i marka, våt vegetasjon</td><td>Ristes og tørkes etter bruk</td><td>Lavt-middels</td></tr>
+          <tr><td>Regnbukse</td><td>Lenger uteopphold, pendling</td><td>Vask og impregner ved behov</td><td>Middels</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="col-3">
+      <div>
+        <h3>Vanlige feil å unngå</h3>
+        <ul>
+          <li>Kun bruke paraply: fungerer i lett regn, men er upraktisk i vind og langvarig nedbør.</li>
+          <li>Bruke bomull innerst: bomull blir tungt og kaldt når det blir vått, i motsetning til ull.</li>
+          <li>Ikke vedlikeholde klærne: uten impregnering mister plaggene raskt evnen til å holde tett.</li>
+          <li>Tørke sko på varmeovner: dette kan skade materialet og redusere levetiden.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tips for studenter og pendlere</h3>
+        <ul>
+          <li>Ha alltid en lett regnjakke eller poncho i sekken fordi været kan endre seg raskt.</li>
+          <li>Bruk en sekk med regntrekk for å beskytte laptop, bøker og notater.</li>
+          <li>Invester i et par gode sko som kan brukes både på vei til forelesning og på fritiden.</li>
+          <li>Legg et ekstra par sokker eller en tynn genser i sekken, små tiltak kan gjøre en stor forskjell.</li>
+          <li>For syklister: regnponcho eller regnbukse gjør hverdagen langt mer praktisk.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Vedlikehold</h3>
+        <ul>
+          <li>Vask skalljakker og regnbukser med spesialmiddel for membranplagg.</li>
+          <li>Ikke bruk tøymykner, da dette tetter porene i stoffet.</li>
+          <li>Impregner klær og sko jevnlig for å opprettholde vanntetthet.</li>
+          <li>Tørk klær og sko i romtemperatur; bruk avispapir i støvler for raskere tørking.</li>
+          <li>Oppbevar klær på et tørt sted, fuktige klesskap kan skape lukt og mugg.</li>
+        </ul>
+      </div>
+</section>
+
+<section class="bilde-og-reklame">
+  <figure class="bilde-utstyr">
+    <img src="public/img/regnutstyr.png" width="1000" height="750" alt="Regnutstyr" />
+  </figure>
+
+  <div class="reklame">
+    <a href="https://www.xxl.no/" target="_blank">
+      <img src="shopping.jpg" alt="Stormberg Lysekil regnjakke – 499 kr hos XXL" class="reklamebilde">
+    </a>
+    <h4>Stormberg Lysekil regnjakke</h4>
+    <p>499,00 kr – tilgjengelig hos XXL Sport & Villmark</p>
+    <a href="https://www.xxl.no/" target="_blank" class="btn">Se tilbud</a>
   </div>
-  <div>
-    <ul>
-      <li><a href="#">Kontakt oss</a></li>
-      <li><a href="#">FAQ</a></li>
-    </ul>
-</div>
-  <small>© 2025 Regnbyen Bergen A/S. All rights NOT reserved lol.</small>
-</footer>
+</section>
+
+<section>
+  <figure>
+    <img src="public/img/regnut.png" width="1000" height="750" alt="Hovedbilde" />
+  </figure>
+</section>
+
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <img src="logo1.png.jpeg" alt="Regnbyen AS logo" class="footer-logo">
+      <ul>
+        <li><a href="kontakt.html">Kontakt oss</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+      <small>© 2025 Regnbyen Bergen AS – Alle rettigheter forbeholdt.</small>
+    </div>
+  </footer>
 
 </body>
 </html>
+

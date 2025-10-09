@@ -1,4 +1,4 @@
-/* 🌐 GENERELL STIL */
+/* 🌐 GENERELL STIL FOR SIDEN */
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -40,7 +40,7 @@ body {
 
 .nav-btn:hover,
 .nav-btn.active {
-  background: #e04e2a; /* oransje hover/fokus som på hus-siden */
+  background: #e04e2a;
 }
 
 /* 🖼️ HERO-BILDE */
@@ -50,17 +50,15 @@ body {
   object-fit: cover;
   display: block;
   margin-top: 10px;
-  border-radius: 6px;
 }
 
-/* 🧱 INFORMASJONS-KORT */
+/* 🧱 INFORMASJONS-SEKSJON */
 .card-container {
   display: flex;
   justify-content: center;
   gap: 40px;
   padding: 60px 20px;
   text-align: center;
-  flex-wrap: wrap; /* slik at det fungerer på mobil */
 }
 
 .card {
@@ -69,11 +67,6 @@ body {
   padding: 20px;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
 }
 
 .card h3 {
@@ -85,25 +78,4 @@ body {
   font-size: 14px;
   color: #555;
   line-height: 1.6;
-}
-
-/* 📍 MEDIA QUERIES FOR RESPONSIVE DESIGN */
-@media (max-width: 960px) {
-  .card-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-  }
-  .nav-btn {
-    width: 100%;
-    text-align: center;
-  }
 }
