@@ -19,6 +19,10 @@ body {
     background-color: #f9f9f9;
 }
 
+li {
+    list-style: none;
+}
+
 .card {
     background: #2c3e50;
     color: darkblue;
@@ -133,6 +137,34 @@ body {
     display: none;
 }
 
+/* ------------ Alternative Nav bar styles ----------*/
+.header-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+} 
+
+.nav-menu {
+    width: 70%;
+    min-width: 600px;
+    height: 16vh;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    margin: auto;
+}
+
+.navlink {
+    position: relative;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    color: black;
+    padding: 0 10px;
+}
+
+
 /* ------------------------------
    HERO
 ---------------------------------*/
@@ -144,12 +176,13 @@ body {
     color: #fff;
 }
 
-    .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.25));
-    }
+/* --- Gradient over bakgrunnsbilde --- */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.25));
+}
 
 /* VIKTIG: bruk samme containerbredde og VENSTRE-justering som header/kort */
 .hero-inner {
@@ -164,11 +197,16 @@ body {
 
 .hero-text {
     max-width: 60ch;
+    align-items: left;
 }
 
-    .hero-text h1 {
-        margin-bottom: .5rem;
-    }
+.hero-tittel {
+    text-align: left;
+}
+
+.hero-text h1 {
+    margin-bottom: .5rem;
+}
 
 /* Skjul evt. hero-bildet i HTML n�r bakgrunn brukes */
 .hero-media {
@@ -183,7 +221,144 @@ body {
     }
 }
 
+/* ------------------------------
+   TYPOGRAPHY
+---------------------------------*/
+h1 {
+    margin-top: 0;
+    font-size: 2em;
+    text-align: center;
+}
 
+h2 {
+    margin-top: 50px;
+    margin-left: -25px;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 50px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h4 {
+    margin-top: 50px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h5 {
+    margin-top: 80px;
+    margin-left: 0px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+section {
+    margin-bottom: 1.5em;
+}
+
+figure {
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.9em;
+    margin-top: 0.3em;
+}
+
+/* ------------------------------
+   TABLES
+---------------------------------*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5em 0;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+caption {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+/* ------------------------------
+   LAYOUT UTILITIES
+---------------------------------*/
+.flex {
+    display: flex;
+    gap: 1.5em;
+    align-items: flex-start;
+}
+
+figure img {
+    display: block;
+}
+
+.flex figure {
+    margin: 0;
+}
+
+.flex img.leftpic {
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+.flex img.rightpic {
+    margin-left: 0px;
+    margin-top: 65px;
+}
+
+.flex img.midpic {
+    margin-left: 30px;
+    margin-top: 60px;
+}
+
+.col-3 {
+    display: flex;
+    gap: 1.5em;
+    font-size: 0.75em;
+}
+
+.col-3 > div {
+    flex: 1;
+}
+
+.centered {
+    display: inline-block;
+    text-align: left;
+    margin-left: 225px;
+    margin-top: -20px;
+    list-style-position: inside;
+    font-size: 30px;
+}
+
+.pee {
+    margin-top: -25px;
+}
+
+.peetwo {
+    margin-top: 0px;
+}
+
+.copyright {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 0.9em;
+}
 
 /* ------------------------------
    KORT / GRID
@@ -308,6 +483,16 @@ body {
         .footer-inner a:hover {
             text-decoration: underline;
         }
+
+/* --- Alternative Footer styles --- */
+footer {
+    display: flex;
+    gap: 75px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    background: #fff;
+}
 
 /* ------------------------------
    RESPONSIVT DESIGN

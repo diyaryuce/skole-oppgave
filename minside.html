@@ -3,33 +3,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Min side � Regnbyen Bergen AS</title>
-    <!-- Hvis CSS-en din ligger i /css/style.css, bytt href til css/style.css -->
-    <link rel="stylesheet" href="style.css">
+    <title>Min side – Regnbyen Bergen AS</title>
+    <!-- Hvis CSS-en din ligger i /css/styles.css, bytt href til css/styles.css -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="site-header">
+    <a class="skip-link" href="#innhold">Hopp til innhold</a>
+
+    <!-- Toppmeny (match wireframe med logo + lenker) -->
+    <header class="site-header" role="banner">
         <div class="container header-inner">
-            <a href="index.html" class="logo" aria-label="RB forside">
-                <img src="images/logo.png" class="logo-img" width="36" height="36">
-               
+            <a href="index.html" class="logo" aria-label="Regnbyen Bergen AS">
+                <img src="public/logo/logo.png"
+                     alt="RB – Regnbyen Bergen AS"
+                     class="logo-img"
+                     width="40" height="40" loading="eager">
             </a>
+
             <nav class="main-nav" aria-label="Hovedmeny">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
-                    
-                    <li><a href="klaer.html">Kl�r &amp; sko</a></li>
+                    <li><a href="om-oss.html">Om prosjektet</a></li>
+                    <li><a href="klaer.html">Klær &amp; sko</a></li>
                     <li><a href="hus.html">Hus</a></li>
-                    <li><a href="biler.html">Bil</a></li>
+                    <li><a href="bil.html">Bil</a></li>
                     <li><a href="sosialearagementer.html"> Sosialegrupper</a></li>
                     <li><a href="aktiviteter.html">Aktiviteter</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
-                    <li><a href="om-oss.html">Om prosjektet</a></li>
-                    <li><a class="active" href="minside.html" aria-current="page">Min side</a></li>
-
-
                 </ul>
             </nav>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">Meny</button>
         </div>
     </header>
 
@@ -52,12 +55,12 @@
                     <section class="about">
                         <h2>Om meg</h2>
                         <p>
-                            Jeg heter Khader, og jeg kommer fra Palestina. Jeg er en positiv og nysgjerrig person som liker � l�re nye ting og utvikle meg b�de faglig og personlig.
-                            Jeg interesserer meg for teknologi, probleml�sing og kreativ tenkning, og jeg liker � finne nye m�ter � forst� hvordan ting fungerer p�.
+                            Jeg heter Khader, og jeg kommer fra Palestina. Jeg er en positiv og nysgjerrig person som liker å lære nye ting og utvikle meg både faglig og personlig.
+                            Jeg interesserer meg for teknologi, problemløsing og kreativ tenkning, og jeg liker å finne nye måter å forstå hvordan ting fungerer på.
                         </p>
                         <p>
-                            Jeg verdsetter samarbeid og liker � bidra til gode l�sninger, enten det handler om skoleprosjekter, arbeid eller personlige m�l.
-                            Jeg tror p� at man alltid kan l�re noe nytt � og det er det som motiverer meg hver dag.
+                            Jeg verdsetter samarbeid og liker å bidra til gode løsninger, enten det handler om skoleprosjekter, arbeid eller personlige mål.
+                            Jeg tror på at man alltid kan lære noe nytt – og det er det som motiverer meg hver dag.
                         </p>
                     </section>
 
@@ -76,19 +79,19 @@
             </thead>
             <tbody>
                 <tr>
-                    <td> F�dt</td>
+                    <td> Født</td>
                     <td>20/10/2004</td>
                 </tr>
                 <tr>
                     <td>Utdanning</td>
-                    <td>Dataingeni�r</td>
+                    <td>Dataingeniør</td>
                 </tr>
                 <tr>
                     <td>Ferdigheter</td>
                     <td>Grunnlegende: HTML/CSS, Java, Python, Sql</td>
                 </tr>
                 <tr>
-                    <td>Spr�k</td>
+                    <td>Språk</td>
                     <td>Arabisk, norsk, engelsk</td>
                 </tr>
                 <tr>

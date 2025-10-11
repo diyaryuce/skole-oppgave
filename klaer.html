@@ -7,28 +7,37 @@
 
 
   <!--Stylesheet CSS-->
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
 
 </head>
 <body>
 
-    <header class="">
-        <div class="container header-nav" >
-            <!---Logo ---->
-            <div>
-                <img src="public/logo/bergen_regnbyen_as.jpeg" alt="bergen as " width="150" height="150">
-            </div>
-             <!--- Nav ---->
-            <nav>
-                <ul class="nav-menu">
-                    <li><a class="navlink" href="index.html">hjem</a></li>
-                    <li><a class="navlink" href="klaer.html">klær</a></li>
-                    <li><a class="navlink" href="hus.html">hus</a></li>
-                    <li><a class="navlink" href="om-oss.html">om oss</a></li>
-                    <li><a class="navlink" href="kontakt.html">kontakt</a></li>
+    <a class="skip-link" href="#innhold">Hopp til innhold</a>
+
+    <!-- Toppmeny (match wireframe med logo + lenker) -->
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="Regnbyen Bergen AS">
+                <img src="public/logo/logo.png"
+                     alt="RB – Regnbyen Bergen AS"
+                     class="logo-img"
+                     width="40" height="40" loading="eager">
+            </a>
+
+            <nav class="main-nav" aria-label="Hovedmeny">
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="om-oss.html">Om prosjektet</a></li>
+                    <li><a class="active" href="klaer.html" aria-current="page">Klær &amp; sko</a></li>
+                    <li><a href="hus.html">Hus</a></li>
+                    <li><a href="bil.html">Bil</a></li>
+                    <li><a href="sosialearagementer.html"> Sosialegrupper</a></li>
+                    <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
-            </nav>  
-        </div>        
+            </nav>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">Meny</button>
+        </div>
     </header>
 
 
@@ -38,18 +47,22 @@
 </div>
 
    
-    <footer>
-  <div class="logo">
-    <img src="public/img/logo.png" alt="RB Logo" width="150"/>
-  </div>
-  <div>
-    <ul>
-      <li><a href="#">Kontakt oss</a></li>
-      <li><a href="#">FAQ</a></li>
-    </ul>
-</div>
-  <small>© 2025 Regnbyen Bergen A/S. All rights NOT reserved lol.</small>
-</footer>
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
+            <nav aria-label="Bunnmeny">
+                <ul>
+                    <li><a href="tilgjengelighet.html">Tilgjengelighet</a></li>
+                    <li><a href="personvern.html">Personvern</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+      // liten hjelp for årstall, ingen styling
+      document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
 
 </body>
 </html>
