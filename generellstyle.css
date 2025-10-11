@@ -342,13 +342,14 @@ footer a:hover {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  width: 700px ;
 }
 
 /* Reklameboks til høyre */
 .reklame {
   background-color: #f8f8f8;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 1px;
+  padding: 1px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   width: 350px;                /* fast bredde på reklameboks */
@@ -380,7 +381,7 @@ footer a:hover {
   display: inline-block;
   background: #e04e2a;
   color: white;
-  padding: 8px 16px;
+  padding: 1px 1px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
@@ -407,3 +408,146 @@ footer a:hover {
     margin-top: 20px;
   }
 }
+
+/* hus side */
+
+/* HERO-bildet */
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+/* Kort-container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+}
+
+/* Hvert kort */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Responsivt design (for mobil) */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Sjekkliste med reklame ved siden av */
+.sjekkliste-og-reklame {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background-color: #f7f7ff;
+}
+
+.sjekkliste {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.sjekkliste h4 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.sjekkliste ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Reklamebilde til høyre for sjekklisten */
+.reklame-side {
+  flex: 0 0 300px;
+  text-align: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.reklame-side img.reklamebilde {
+  width: 100%;
+  height: 270px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.reklame-side h4 {
+  margin-bottom: 0.5rem;
+}
+
+.reklame-side p {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .sjekkliste-og-reklame {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reklame-side {
+    max-width: 400px;
+  }
+}
+
+
