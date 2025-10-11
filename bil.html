@@ -1,8 +1,9 @@
 <!doctype html>
-<html>
+<html lang="no">
     <head>
         <meta charset="UTF-8">
-        <tittle></tittle>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Regnbyen Bergen AS - Bil</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
         <!--Stylesheet CSS-->
         <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -10,93 +11,165 @@
     <body>
         
         <!-- Toppmeny (match wireframe med logo + lenker) -->
-        <header class="site-header" role="banner">
-            <div class="container">
-                <a href="index.html" class="logo" aria-label="Regnbyen Bergen AS">
+        <header class="site-header">
+            <div class="container header-inner">
+                <a href="index.html" aria-label="Gå til hjemmesiden">
                     <img src="public/logo/logo.png"
-                        alt="RB – Regnbyen Bergen AS"
-                        class="logo-img"
-                        width="40" height="40" loading="eager">
+                        alt="Regnbyen Bergen AS Logo"
+                        class="logo"
+                        loading="eager" />
                 </a>
 
-                <nav class="main-nav" aria-label="Hovedmeny">
-                    <ul>
-                        <li><a class="active" href="index.html" aria-current="page">Hjem</a></li>
+                <!-- Mobile menu toggle button -->
+                <button class="menu-toggle" aria-label="Åpne meny" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav aria-label="Hovedmeny">
+                    <ul class="navbar">
+                        <li><a href="index.html">Hjem</a></li>
                         <li><a href="om-oss.html">Om prosjektet</a></li>
                         <li><a href="klaer.html">Klær &amp; sko</a></li>
                         <li><a href="hus.html">Hus</a></li>
-                        <li><a href="bil.html">Bil</a></li>
-                        <li><a href="sosialearagementer.html"> Sosialegrupper</a></li>
+                        <li><a class="active" href="bil.html" aria-current="page">Bil</a></li>
+                        <li><a href="sosialearagementer.html">Sosialegrupper</a></li>
                         <li><a href="aktiviteter.html">Aktiviteter</a></li>
                         <li><a href="kontakt.html">Kontakt</a></li>
                     </ul>
                 </nav>
-                <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">Meny</button>
             </div>
         </header>
 
-        
-    
+
         
         <main>
-            <img src="public/img/car1.png" width="1800" style="margin-top: 20px;">
-            <div class="card-container">
-                <div class="card">
-                    <img src="public/img/AWD.png">
-                    <div class="card.content">
-                    <h3>firehjulstrekk</h3>
-                    <p>
-                        Firehjulstrekk er nyttig i Bergen fordi det ofte regner og veiene kan bli glatte. Systemet gir bedre grep og kontroll, spesielt i bakker og på våte veier. Mange velger biler med firehjulstrekk for å føle seg tryggere i byens bratte gater og når de kjører utenfor sentrum.
-                    </p>
-                    <a href=""class="btn">les mer</a>
+            <!-- Hero section -->
+            <section class="hero hero-bil" aria-labelledby="hero-tittel-bil">
+                <div class="container hero-inner">
+                    <div class="hero-text">
+                        <h1 class="hero-tittel" id="hero-tittel-bil">Bilkjøring i Bergen</h1>
+                        <p class="hero-description">Bergen krever ekstra oppmerksomhet bak rattet. Våte veier, bratte bakker og fuktig klima stiller krav til både bil og sjåfør. Få eksperttips om hvordan du kjører trygt i regnværet.</p>
+                        <div class="hero-actions">
+                            <a href="#bil-tips" class="btn btn-primary">Se våre tips</a>
+                            <a href="kontakt.html" class="btn btn-secondary">Kontakt oss</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <!-- Cards section -->
+            <section class="container" id="bil-tips">
+                <div class="card-container">
+                    <div class="card">
+                        <img src="public/img/firehjulstrekk.png" alt="Firehjulstrekk system" class="card-banner" loading="lazy">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3>Firehjulstrekk</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>
+                                    Firehjulstrekk er nyttig i Bergen fordi det ofte regner og veiene kan bli glatte. Systemet gir bedre grep og kontroll, spesielt i bakker og på våte veier. Mange velger biler med firehjulstrekk for å føle seg tryggere i byens bratte gater og når de kjører utenfor sentrum.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="card-link">Les mer →</a>
+                            </div>
+                        </div>
                     </div>
 
-                </div>
-                <div class="card">
-                    <img src="public/img/bildekk.png">
-                    <div class="card.content">
-                    <h3>dekkvalg</h3>
-                    <p>
-                        Anbefalte merker som takler regn og våte veier godt er Michelin, Continental, Nokian, Goodyear og Bridgestone. Disse er kjent for god gripeevne, effektiv vannavrenning og høy slitestyrke,perfekt for Bergens regnfulle klima.
-                    </p>
-                    <a href=""class="btn">les mer</a>
-
+                    <div class="card">
+                        <img src="public/img/bildekk.png" alt="Bildekk for Bergen" class="card-banner" loading="lazy">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3>Dekkvalg</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>
+                                    Anbefalte merker som takler regn og våte veier godt er Michelin, Continental, Nokian, Goodyear og Bridgestone. Disse er kjent for god gripeevne, effektiv vannavrenning og høy slitestyrke, perfekt for Bergens regnfulle klima.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="card-link">Les mer →</a>
+                            </div>
+                        </div>
                     </div>
 
-                </div>
-                <div class="card">
-                    <img src="public/img/veier.png">
-                    <div class="card.content">
-                    <h3>veier</h3>
-                    <p>
-                    Bergens veier er ofte bratte, svingete og glatte på grunn av det fuktige klimaet. Regn og løv kan gjøre veibanen glatt selv på sommeren. God drenering og jevn vedlikehold er viktig for trafikksikkerhet, men sjåfører må også tilpasse farten til forholdene.
-                    </p>
-                    <a href=""class="btn">les mer</a>
-
+                    <div class="card">
+                        <img src="public/img/veier.png" alt="Veier i Bergen" class="card-banner" loading="lazy">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h3>Veier</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>
+                                    Bergens veier er ofte bratte, svingete og glatte på grunn av det fuktige klimaet. Regn og løv kan gjøre veibanen glatt selv på sommeren. God drenering og jevnlig vedlikehold er viktig for trafikksikkerhet, men sjåfører må også tilpasse farten til forholdene.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="card-link">Les mer →</a>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-
-            </div>
+            </section>
         </main>
 
-        <footer class="site-footer" role="contentinfo">
-            <div class="container footer-inner">
-                <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
-                <nav aria-label="Bunnmeny">
-                    <ul>
-                        <li><a href="tilgjengelighet.html">Tilgjengelighet</a></li>
-                        <li><a href="personvern.html">Personvern</a></li>
-                        <li><a href="kontakt.html">Kontakt</a></li>
-                    </ul>
-                </nav>
+        <footer role="contentinfo">
+            <div class="container">
+                <div class="footer-inner">
+                    <!-- About Section -->
+                    <div class="footer-copyright">
+                        <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
+                        <p style="font-size: 0.9rem; color: #b0b0b0; line-height: 1.7;">
+                            Din guide til å leve godt i Bergen – tips om klær, bolig, bil og aktiviteter for alle årstider.
+                        </p>
+                    </div>
+
+                    <!-- Navigation Links -->
+                    <div class="footer-nav-section">
+                        <h3>Snarveier</h3>
+                        <nav aria-label="Bunnmeny">
+                            <ul class="footer-menu">
+                                <li><a href="om-oss.html">Om oss</a></li>
+                                <li><a href="klaer.html">Klær & sko</a></li>
+                                <li><a href="hus.html">Hus</a></li>
+                                <li><a href="bil.html">Bil</a></li>
+                                <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                                <li><a href="kontakt.html">Kontakt</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Newsletter Subscription -->
+                    <div class="footer-newsletter">
+                        <h3>Motta våre tips</h3>
+                        <p>Få de beste rådene for regnfulle dager direkte i innboksen din.</p>
+                        <form class="newsletter-form" action="#" method="post" aria-label="Nyhetsbrev påmelding">
+                            <input 
+                                type="email" 
+                                class="newsletter-input" 
+                                placeholder="Din e-postadresse" 
+                                required 
+                                aria-label="E-postadresse"
+                            />
+                            <button type="submit" class="newsletter-btn">Abonner</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <p>&copy; <span id="year-bottom">2025</span> Regnbyen Bergen A/S. Alle rettigheter reservert. 
+                        <a href="tilgjengelighet.html" style="margin-left: 1rem;">Tilgjengelighet</a> | 
+                        <a href="personvern.html">Personvern</a>
+                    </p>
+                </div>
             </div>
-            <script>
-          // liten hjelp for årstall, ingen styling
-          document.getElementById('year').textContent = new Date().getFullYear();
-            </script>
         </footer>
+      
+        <script src="main.js"></script>
         
     </body>
 </html>

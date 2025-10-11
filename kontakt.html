@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Regnbyen Bergen AS</title>
+  <title>Kontakt oss - Regnbyen Bergen AS</title>
 
 
   <!--Stylesheet CSS-->
@@ -13,69 +13,231 @@
 </head>
 <body>
 
-    <!-- Toppmeny (match wireframe med logo + lenker) -->
-    <header class="site-header" >
-        <div class="container header-inner">
-            <a href="index.html" aria-label="Regnbyen Bergen AS">
-                <img src="public/logo/logo.png"
-                     alt="RB – Regnbyen Bergen AS"
-                     class="logo"
-                     width="40" height="40" loading="eager" />
-            </a>
+        <!-- Toppmeny (match wireframe med logo + lenker) -->
+        <header class="site-header">
+            <div class="container header-inner">
+                <a href="index.html" aria-label="Gå til hjemmesiden">
+                    <img src="public/logo/logo.png"
+                         alt="Regnbyen Bergen AS Logo"
+                         class="logo"
+                         loading="eager" />
+                </a>
+    
+                <!-- Mobile menu toggle button -->
+                <button class="menu-toggle" aria-label="Åpne meny" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-            <nav aria-label="Hovedmeny">
-                <ul class="navbar">
-                    <li><a class="active" href="index.html" aria-current="page">Hjem</a></li>
-                    <li><a href="om-oss.html">Om prosjektet</a></li>
-                    <li><a href="klaer.html">Klær &amp; sko</a></li>
-                    <li><a href="hus.html">Hus</a></li>
-                    <li><a href="bil.html">Bil</a></li>
-                    <li><a href="sosialearagementer.html"> Sosialegrupper</a></li>
-                    <li><a href="aktiviteter.html">Aktiviteter</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </nav>
-            <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">Meny</button>
-        </div>
-    </header>
+                <nav aria-label="Hovedmeny">
+                    <ul class="navbar">
+                        <li><a href="index.html">Hjem</a></li>
+                        <li><a href="om-oss.html">Om prosjektet</a></li>
+                        <li><a href="klaer.html">Klær &amp; sko</a></li>
+                        <li><a href="hus.html">Hus</a></li>
+                        <li><a href="bil.html">Bil</a></li>
+                        <li><a href="sosialearagementer.html">Sosialegrupper</a></li>
+                        <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                        <li><a class="active" href="kontakt.html" aria-current="page">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
 
 <main>
+    <!-- Intro section -->
+    <section class="intro-section">
+        <h1>Kontakt oss</h1>
+        <p>
+            Har du spørsmål om våre tjenester eller ønsker å komme i kontakt med oss? 
+            Vi er her for å hjelpe deg med alt som har med regn og Bergen å gjøre!
+        </p>
+    </section>
 
-    <section style="background-color: red;" >
-        outside the container
-        <div class="container" style="background-color: blue;">
-            
-            inside the container
+    <!-- Contact Information and Form -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Kontaktinformasjon</h2>
+                    
+                    <div class="contact-item">
+                        <h3>Adresse</h3>
+                        <p>
+                            Regnbyen Bergen AS<br>
+                            Bryggen 1<br>
+                            5003 Bergen<br>
+                            Norge
+                        </p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>Telefon</h3>
+                        <p>
+                            <a href="tel:+4755123456">+47 55 12 34 56</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>E-post</h3>
+                        <p>
+                            <a href="mailto:kontakt@regnbyenbergen.no">kontakt@regnbyenbergen.no</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>Åpningstider</h3>
+                        <p>
+                            Mandag - Fredag: 09:00 - 17:00<br>
+                            Lørdag: 10:00 - 14:00<br>
+                            Søndag: Stengt
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send oss en melding</h2>
+                    <form action="#" method="post" class="contact-form">
+                        
+                        <div class="form-group">
+                            <label for="name">Navn *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required
+                                placeholder="Skriv ditt fulle navn"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-post *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required
+                                placeholder="din.epost@example.com"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone"
+                                placeholder="+47 123 45 678"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Emne *</label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                required
+                                placeholder="Hva gjelder din henvendelse?"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Melding *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="6" 
+                                required
+                                placeholder="Skriv din melding her..."
+                            ></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn form-submit-btn">
+                                Send melding
+                            </button>
+                        </div>
+
+                        <p class="form-note">* Obligatoriske felt</p>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Map or Additional Info -->
+            <div class="location-box">
+                <h3>Finn oss</h3>
+                <p>Vi ligger sentralt plassert på Bryggen i Bergen, lett tilgjengelig med bybane, buss eller til fots fra sentrum.</p>
+                <p>
+                    <a href="https://www.google.com/maps/place/Bryggen,+Bergen" target="_blank" rel="noopener noreferrer" class="btn">
+                        Åpne i Google Maps
+                    </a>
+                </p>
+            </div>
         </div>
     </section>
 </main>
 
-<section style="height: 800px; background-color: red;">
-
-   <div class="container" style="background-color: blue;">
-            
-            inside the container
-        </div>
-</section>
-
    
-    <footer class="site-footer" role="contentinfo">
-        <div class="container footer-inner">
-            <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
-            <nav aria-label="Bunnmeny">
-                <ul>
-                    <li><a href="tilgjengelighet.html">Tilgjengelighet</a></li>
-                    <li><a href="personvern.html">Personvern</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </nav>
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- About Section -->
+                <div class="footer-copyright">
+                    <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
+                    <p style="font-size: 0.9rem; color: #b0b0b0; line-height: 1.7;">
+                        Din guide til å leve godt i Bergen – tips om klær, bolig, bil og aktiviteter for alle årstider.
+                    </p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="footer-nav-section">
+                    <h3>Snarveier</h3>
+                    <nav aria-label="Bunnmeny">
+                        <ul class="footer-menu">
+                            <li><a href="om-oss.html">Om oss</a></li>
+                            <li><a href="klaer.html">Klær & sko</a></li>
+                            <li><a href="hus.html">Hus</a></li>
+                            <li><a href="bil.html">Bil</a></li>
+                            <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Newsletter Subscription -->
+                <div class="footer-newsletter">
+                    <h3>Motta våre tips</h3>
+                    <p>Få de beste rådene for regnfulle dager direkte i innboksen din.</p>
+                    <form class="newsletter-form" action="#" method="post" aria-label="Nyhetsbrev påmelding">
+                        <input 
+                            type="email" 
+                            class="newsletter-input" 
+                            placeholder="Din e-postadresse" 
+                            required 
+                            aria-label="E-postadresse"
+                        />
+                        <button type="submit" class="newsletter-btn">Abonner</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="year-bottom">2025</span> Regnbyen Bergen A/S. Alle rettigheter reservert. 
+                    <a href="tilgjengelighet.html" style="margin-left: 1rem;">Tilgjengelighet</a> | 
+                    <a href="personvern.html">Personvern</a>
+                </p>
+            </div>
         </div>
-        <script>
-      // liten hjelp for årstall, ingen styling
-      document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
     </footer>
 
+    <script src="main.js"></script>
 </body>
 </html>
