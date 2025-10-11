@@ -78,6 +78,106 @@ a:hover::before {
 /* ------------ END OF Nav bar ----------*/
 
 /* ------------------------------
+   HEADER
+---------------------------------*/
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* over hero-bildet */
+  background: #fff; /* solid bakgrunn s� tekst ikke skinner gjennom */
+  border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+  .main-nav a.active,
+  .main-nav a:hover {
+      color: #0066cc;
+  }
+
+/* Burgerknapp skjult desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* Tilgjengelighetssnarvei */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+  .skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 0.5rem;
+      background: #222;
+      color: #fff;
+      z-index: 1000;
+  }
+
+/*LOGO STYLING*/
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 66px; /* styr h�yden, bredden f�lger automatisk */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.download-logo a {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .4rem .8rem;
+  border-radius: 6px;
+  background: #0066cc;
+  color: #fff;
+  text-decoration: none;
+}
+
+  .download-logo a:hover {
+      background: #004c99;
+  }
+
+
+
+
+/* ------------------------------
    HERO
 ---------------------------------*/
 /* --- Hero med bakgrunnsbilde --- */
@@ -242,6 +342,99 @@ h1 {
       font-size: 0.9em;
     }
 
+
+    /* ------------------------------
+   KORT / GRID
+---------------------------------*/
+.card-grid {
+  margin: 4rem auto;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-media img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+  .card-body h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+  }
+
+  .card-body p {
+      font-size: 0.95rem;
+      color: #555;
+      flex-grow: 1;
+  }
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn,
+.btn-link {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.btn {
+  background: #0066cc;
+  color: #fff;
+}
+
+  .btn:hover {
+      background: #004c99;
+  }
+
+.btn-link {
+  color: #0066cc;
+}
+
+  .btn-link:hover {
+      text-decoration: underline;
+  }
+
+/* ======== KORTBILDER ======== */
+.card-media {
+  aspect-ratio: 16 / 9; /* alle bilder f�r samme bredde/h�ydeforhold */
+  overflow: hidden; /* klipper alt som stikker utenfor */
+  border-bottom: 1px solid #eee;
+}
+
+  .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* gj�r at bildet fyller boksen pent */
+      display: block;
+  }
+
 /* ---------- Footer ------------ */
 
 footer {
@@ -356,5 +549,35 @@ footer {
     margin-bottom: 1rem;
 }
 
+/* ------------------------------
+   FOOTER
+---------------------------------*/
+.site-footer {
+  background: #222;
+  color: #eee;
+  padding: 1rem 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+  .footer-inner ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+  }
+
+  .footer-inner a {
+      color: #eee;
+      text-decoration: none;
+  }
+
+      .footer-inner a:hover {
+          text-decoration: underline;
+      }
 
 
