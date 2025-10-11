@@ -11,85 +11,184 @@
 
 </head>
 <body>
-    <!-- Toppmeny (match wireframe med logo + lenker) -->
-    <header class="site-header" role="banner">
-        <div class="container header-inner">
-            <a href="index.html" class="logo" aria-label="Regnbyen Bergen AS">
-                <img src="public/logo/logo.png"
-                     alt="RB – Regnbyen Bergen AS"
-                     class="logo-img"
-                     width="40" height="40" loading="eager">
-            </a>
+        <!-- Toppmeny (match wireframe med logo + lenker) -->
+        <header class="site-header">
+            <div class="container header-inner">
+                <a href="index.html" aria-label="Gå til hjemmesiden">
+                    <img src="public/logo/logo.png"
+                         alt="Regnbyen Bergen AS Logo"
+                         class="logo"
+                         loading="eager" />
+                </a>
+    
+                <!-- Mobile menu toggle button -->
+                <button class="menu-toggle" aria-label="Åpne meny" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-            <nav class="main-nav" aria-label="Hovedmeny">
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a class="active" href="om-oss.html" aria-current="page">Om prosjektet</a></li>
-                    <li><a href="klaer.html">Klær &amp; sko</a></li>
-                    <li><a href="hus.html">Hus</a></li>
-                    <li><a href="bil.html">Bil</a></li>
-                    <li><a href="sosialearagementer.html"> Sosialegrupper</a></li>
-                    <li><a href="aktiviteter.html">Aktiviteter</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </nav>
-            <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">Meny</button>
-        </div>
-    </header>
+                <nav aria-label="Hovedmeny">
+                    <ul class="navbar">
+                        <li><a href="index.html">Hjem</a></li>
+                        <li><a class="active" href="om-oss.html" aria-current="page">Om prosjektet</a></li>
+                        <li><a href="klaer.html">Klær &amp; sko</a></li>
+                        <li><a href="hus.html">Hus</a></li>
+                        <li><a href="bil.html">Bil</a></li>
+                        <li><a href="sosialearagementer.html">Sosialegrupper</a></li>
+                        <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
 
     <main>
-        <section class="intro-section">
-          <p>
-           Om Bergen Regnby      
-          </p>
+        <!-- Hero section -->
+        <section class="hero hero-om-oss" aria-labelledby="hero-tittel-om-oss">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h1 class="hero-tittel" id="hero-tittel-om-oss">Om Bergen Regnby</h1>
+                    <p class="hero-description">Vi er her for å hjelpe deg å elske Bergen – uansett vær. Oppdag hvem vi er, hva vi står for, og hvordan vi jobber for å gjøre livet i regnbyen enklere og bedre.</p>
+                    <div class="hero-actions">
+                        <a href="#om-oss-info" class="btn btn-primary">Les mer om oss</a>
+                        <a href="kontakt.html" class="btn btn-secondary">Ta kontakt</a>
+                    </div>
+                </div>
+            </div>
         </section>
     
-        <!-- Seks bokser i to rader -->
-        <section class="card-grid">
-          <div class="card">
-            <h3>Vår historie</h3>
-            <p>Bergen Regnby er en nystartet bedrift som har et mål om å gjøre livet for folk i Bergen enklere og bedre.</p>
-          </div>
-          <div class="card">
-            <h3>Våre verdier</h3>
-            <p>Bærekraft, livskvalitet og lokal tilknytning står i sentrum for alt vi gjør.</p>
-          </div>
-          <div class="card">
-            <h3>Vårt team</h3>
-            <p>Et engasjert lag av it studenter med erfaring fra byggebransjen og klesindustrie og med stor kjennskap til alle de ulike aktivitetene Bergen har å tilby.</p>
-          </div>
-          <div class="card">
-            <h3>Vår visjon</h3>
-            <p>Utgjøre en forkjell slik at bilde av Bergen som regnby blir mer positivt og bidra til at Bergen blir en enda mer attraktiv by å bo i</p>
-          </div>
-          <div class="card">
-            <h3>Miljøfokus</h3>
-            <p>All informasjon og alle tipsene vi gir er gjennomtenkt slik at det ikke fører til negativ påvirkning på miljøet.</p>
-          </div>
-          <div class="card">
-            <h3>Vårt mål</h3>
-            <p>Vi har ikke som mål å tjene store penger, men å være en informasjonskanal og en formidler av temaer knyttet til regnvær i Bergen.  </p>
+        <!-- Cards section -->
+        <section class="container" id="om-oss-info">
+          <div class="card-grid">
+            <div class="grid-row">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-header">
+                    <h3>Vår historie</h3>
+                  </div>
+                  <div class="card-content">
+                    <p>Bergen Regnby er en nystartet bedrift som har et mål om å gjøre livet for folk i Bergen enklere og bedre. Vi ønsker å vise at regnvær ikke trenger å være en hindring.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-header">
+                    <h3>Våre verdier</h3>
+                  </div>
+                  <div class="card-content">
+                    <p>Bærekraft, livskvalitet og lokal tilknytning står i sentrum for alt vi gjør. Vi tror på ansvarlig forretningsdrift som gagner både mennesker og miljø.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-header">
+                    <h3>Vårt team</h3>
+                  </div>
+                  <div class="card-content">
+                    <p>Et engasjert lag av IT-studenter med erfaring fra byggebransjen og klesindustrien, og med stor kjennskap til alle de ulike aktivitetene Bergen har å tilby.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-row">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-header">
+                    <h3>Vår visjon</h3>
+                  </div>
+                  <div class="card-content">
+                    <p>Utgjøre en forskjell slik at bildet av Bergen som regnby blir mer positivt og bidra til at Bergen blir en enda mer attraktiv by å bo i.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-header">
+                    <h3>Miljøfokus</h3>
+                  </div>
+                  <div class="card-content">
+                    <p>All informasjon og alle tipsene vi gir er gjennomtenkt slik at det ikke fører til negativ påvirkning på miljøet. Bærekraft er en naturlig del av vår virksomhet.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-header">
+                    <h3>Vårt mål</h3>
+                  </div>
+                  <div class="card-content">
+                    <p>Vi har ikke som mål å tjene store penger, men å være en informasjonskanal og en formidler av temaer knyttet til regnvær i Bergen.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
    
-    <footer class="site-footer" role="contentinfo">
-        <div class="container footer-inner">
-            <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
-            <nav aria-label="Bunnmeny">
-                <ul>
-                    <li><a href="tilgjengelighet.html">Tilgjengelighet</a></li>
-                    <li><a href="personvern.html">Personvern</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </nav>
+      <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- About Section -->
+                <div class="footer-copyright">
+                    <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
+                    <p style="font-size: 0.9rem; color: #b0b0b0; line-height: 1.7;">
+                        Din guide til å leve godt i Bergen – tips om klær, bolig, bil og aktiviteter for alle årstider.
+                    </p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="footer-nav-section">
+                    <h3>Snarveier</h3>
+                    <nav aria-label="Bunnmeny">
+                        <ul class="footer-menu">
+                            <li><a href="om-oss.html">Om oss</a></li>
+                            <li><a href="klaer.html">Klær & sko</a></li>
+                            <li><a href="hus.html">Hus</a></li>
+                            <li><a href="bil.html">Bil</a></li>
+                            <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Newsletter Subscription -->
+                <div class="footer-newsletter">
+                    <h3>Motta våre tips</h3>
+                    <p>Få de beste rådene for regnfulle dager direkte i innboksen din.</p>
+                    <form class="newsletter-form" action="#" method="post" aria-label="Nyhetsbrev påmelding">
+                        <input 
+                            type="email" 
+                            class="newsletter-input" 
+                            placeholder="Din e-postadresse" 
+                            required 
+                            aria-label="E-postadresse"
+                        />
+                        <button type="submit" class="newsletter-btn">Abonner</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="year-bottom">2025</span> Regnbyen Bergen A/S. Alle rettigheter reservert. 
+                    <a href="tilgjengelighet.html" style="margin-left: 1rem;">Tilgjengelighet</a> | 
+                    <a href="personvern.html">Personvern</a>
+                </p>
+            </div>
         </div>
-        <script>
-      // liten hjelp for årstall, ingen styling
-      document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
     </footer>
+  
+    <script src="main.js"></script>
 
 </body>
 </html>

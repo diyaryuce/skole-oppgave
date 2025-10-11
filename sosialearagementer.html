@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sosiale arrangementer - Regnbyen Bergen AS</title>
+  <meta name="description" content="Oppdag sosiale grupper og arrangementer i Bergen. Møt nye mennesker og delta i aktiviteter, selv når det regner.">
+
+  <!--Stylesheet CSS-->
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+
+</head>
+<body>
+
+    <!-- Toppmeny (match wireframe med logo + lenker) -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" aria-label="Gå til hjemmesiden">
+                <img src="public/logo/logo.png"
+                     alt="Regnbyen Bergen AS Logo"
+                     class="logo"
+                     loading="eager" />
+            </a>
+
+            <!-- Mobile menu toggle button -->
+            <button class="menu-toggle" aria-label="Åpne meny" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav aria-label="Hovedmeny">
+                <ul class="navbar">
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="om-oss.html">Om prosjektet</a></li>
+                    <li><a href="klaer.html">Klær &amp; sko</a></li>
+                    <li><a href="hus.html">Hus</a></li>
+                    <li><a href="bil.html">Bil</a></li>
+                    <li><a class="active" href="sosialearagementer.html" aria-current="page">Sosialegrupper</a></li>
+                    <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<main>
+    <!-- Hero section -->
+    <section class="hero hero-sosiale" aria-labelledby="hero-tittel-sosiale">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1 class="hero-tittel" id="hero-tittel-sosiale">Sosiale grupper og arrangementer</h1>
+                <p class="hero-description">Bergen har et rikt sosialt liv med mange muligheter for å møte nye mennesker. Oppdag grupper, klubber og arrangementer som gjør det enkelt å knytte vennskap – uansett vær.</p>
+                <div class="hero-actions">
+                    <a href="#sosiale-grupper" class="btn btn-primary">Se grupper</a>
+                    <a href="kontakt.html" class="btn btn-secondary">Kontakt oss</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro section -->
+    <section class="container" id="sosiale-grupper" style="margin-top: 4rem;">
+        <div class="intro-section">
+            <h2>Sosialt liv i Bergen</h2>
+            <p>Bergen er en sosial by med et mangfold av grupper og arrangementer. Enten du er ny i byen, student, eller bare ønsker å utvide nettverket ditt, finnes det mange muligheter for å møte likesinnede.</p>
+        </div>
+    </section>
+
+    <!-- Social groups cards -->
+    <section class="container">
+        <div class="card-container">
+            <div class="card">
+                <img src="public/img/fisketorget.jpg" alt="Folk på Fisketorget i Bergen" class="card-banner" loading="lazy">
+                <div class="card-body">
+                    <div class="card-header">
+                        <h3>Studentsosiale grupper</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Bergen har et aktivt studentmiljø med mange studentforeninger, idrettslag og hobbygrupper. Perfekt for å møte andre studenter og delta i sosiale aktiviteter.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Les mer →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="public/img/vilvite.jpg" alt="Folk på VilVite vitensenter" class="card-banner" loading="lazy">
+                <div class="card-body">
+                    <div class="card-header">
+                        <h3>Hobbygrupper</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Fra brettspillkvelder til bokklubber, fotokurs til håndarbeid – Bergen har hobbygrupper for alle interesser. Møt mennesker som deler dine interesser.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Les mer →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="public/img/bryggen.png" alt="Bryggen i Bergen" class="card-banner" loading="lazy">
+                <div class="card-body">
+                    <div class="card-header">
+                        <h3>Kulturarrangementer</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Bergen er rik på kulturarrangementer – konserter, teater, kunstutstillinger og festivaler. Perfekt for å oppleve kultur og møte andre kulturentusiaster.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Les mer →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of groups section -->
+    <section class="container" style="margin-top: 4rem; margin-bottom: 4rem;">
+        <div class="intro-section">
+            <h2>Typer sosiale grupper</h2>
+            <p>Finn den gruppen som passer deg best</p>
+        </div>
+
+        <div class="card-grid">
+            <div class="grid-row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Idrettslag</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Bergen har mange idrettslag for ulike interesser – fotball, håndball, friidrett, svømming, og mer. Trim og trening i godt selskap, både innendørs og utendørs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Språkkafeer</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Øv på norsk eller andre språk i avslappende atmosfære. Språkkafeer er populære i Bergen og gir mulighet til å møte mennesker fra hele verden.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Turgruppper</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Bergen Turlag og andre turgrupper arrangerer regelmessige turer i nærområdet. Opplev Bergens flotte natur sammen med andre friluftsinteresserte.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Frivillige organisasjoner</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Engasjer deg i frivillig arbeid gjennom Røde Kors, Kirkens Bymisjon, eller andre organisasjoner. Gi tilbake til samfunnet og møt engasjerte mennesker.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Kreative verksteder</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Delta i kunstkurs, keramikk, maling eller andre kreative aktiviteter. Flere verksteder i Bergen tilbyr kurs og åpne verksteddager.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Matlagingskurs</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Lær nye oppskrifter og teknikker mens du møter andre matentusiaster. Flere kafeer og restauranter tilbyr matlagingskurs for alle nivåer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips section -->
+    <section class="container" style="margin-bottom: 4rem;">
+        <div class="card-container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-header">
+                        <h3>Tips for å finne grupper</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Sjekk Facebook-grupper for Bergen – mange grupper organiserer seg der</li>
+                            <li>Besøk Meetup.com for å finne lokale arrangementer og grupper</li>
+                            <li>Se på oppslagstavler på bibliotek, kafeer og studentsentre</li>
+                            <li>Snakk med naboer, kolleger eller medstudenter</li>
+                            <li>Prøv forskjellige grupper til du finner de som passer deg</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-header">
+                        <h3>Innendørs arrangementer</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Kafeer og barer arrangerer ofte quizkvelder og konserter</li>
+                            <li>Biblioteket har bokklubb-møter og forfattersamtaler</li>
+                            <li>Bowling, klatring og andre innendørs aktiviteter</li>
+                            <li>Kinokvelder og filmklubber</li>
+                            <li>Spillkvelder med brettspill eller kortspill</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-header">
+                        <h3>Nyttige ressurser</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Bergen.kommune.no – oversikt over kommunale aktiviteter</li>
+                            <li>Studentsamskipnaden i Bergen – aktiviteter for studenter</li>
+                            <li>VisitBergen.com – arrangementskalender</li>
+                            <li>Bergen Folkebibliotek – kurs og arrangementer</li>
+                            <li>Frivillighet Norge – oversikt over frivillige organisasjoner</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA section -->
+    <section class="location-box" style="margin: 4rem auto; max-width: 800px;">
+        <h3>Bli med i fellesskapet!</h3>
+        <p>Har du spørsmål om sosiale grupper i Bergen eller trenger hjelp til å finne riktig gruppe for deg? Ta kontakt med oss, så hjelper vi deg videre.</p>
+        <a href="kontakt.html" class="btn">Kontakt oss</a>
+    </section>
+
+</main>
+
+   
+    <footer role="contentinfo">
+      <div class="container">
+          <div class="footer-inner">
+              <!-- About Section -->
+              <div class="footer-copyright">
+                  <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
+                  <p style="font-size: 0.9rem; color: #b0b0b0; line-height: 1.7;">
+                      Din guide til å leve godt i Bergen – tips om klær, bolig, bil og aktiviteter for alle årstider.
+                  </p>
+              </div>
+
+              <!-- Navigation Links -->
+              <div class="footer-nav-section">
+                  <h3>Snarveier</h3>
+                  <nav aria-label="Bunnmeny">
+                      <ul class="footer-menu">
+                          <li><a href="om-oss.html">Om oss</a></li>
+                          <li><a href="klaer.html">Klær & sko</a></li>
+                          <li><a href="hus.html">Hus</a></li>
+                          <li><a href="bil.html">Bil</a></li>
+                          <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                          <li><a href="kontakt.html">Kontakt</a></li>
+                      </ul>
+                  </nav>
+              </div>
+
+              <!-- Newsletter Subscription -->
+              <div class="footer-newsletter">
+                  <h3>Motta våre tips</h3>
+                  <p>Få de beste rådene for regnfulle dager direkte i innboksen din.</p>
+                  <form class="newsletter-form" action="#" method="post" aria-label="Nyhetsbrev påmelding">
+                      <input 
+                          type="email" 
+                          class="newsletter-input" 
+                          placeholder="Din e-postadresse" 
+                          required 
+                          aria-label="E-postadresse"
+                      />
+                      <button type="submit" class="newsletter-btn">Abonner</button>
+                  </form>
+              </div>
+          </div>
+
+          <!-- Footer Bottom -->
+          <div class="footer-bottom">
+              <p>&copy; <span id="year-bottom">2025</span> Regnbyen Bergen A/S. Alle rettigheter reservert. 
+                  <a href="tilgjengelighet.html" style="margin-left: 1rem;">Tilgjengelighet</a> | 
+                  <a href="personvern.html">Personvern</a>
+              </p>
+          </div>
+      </div>
+  </footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
+
