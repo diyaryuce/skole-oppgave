@@ -252,3 +252,109 @@ footer {
       padding: 16px 32px;
       background: #fff;
     }
+
+    /* --- Personlig side: tabeller --- */
+.profile-table,
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
+    margin-top: 1rem;
+}
+
+    .profile-table td {
+        padding: 1rem 1.25rem;
+        vertical-align: top;
+    }
+
+.profile-figure {
+    margin: 0;
+    text-align: center;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto .5rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+
+.info-table thead th {
+    text-align: left;
+    padding: .85rem 1.1rem;
+    background: #eef3f8; /* lys bl�-gr� bakgrunn for header */
+    color: #1f2b3a;
+    font-weight: 700;
+    border-bottom: 1px solid #e3e9f1;
+}
+
+.info-table tbody td {
+    padding: .85rem 1.1rem;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.info-table tbody tr:hover {
+    background: #fafbfc;
+}
+
+@media (max-width: 700px) {
+    .profile-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .photo-cell {
+        margin-bottom: 1rem;
+    }
+}
+
+/* --- Tilbake-knapp p� minside --- */
+.btn {
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    background: #0066cc;
+    color: #fff;
+    transition: background 0.2s ease;
+    display: inline-block;
+}
+
+    .btn:hover {
+        background: #004c99;
+    }
+
+/* --- Egen stil for tilbake-knappen p� minside --- */
+.back-btn {
+    background: #333; /* m�rk gr� bakgrunn */
+    color: #fff;
+    margin-bottom: 1rem; /* luft over footeren */
+    margin-top:1rem;
+}
+
+    .back-btn:hover {
+        background: #111; /* litt m�rkere ved hover */
+    }
+
+
+/* --- Om meg-seksjon --- */
+.about p {
+    font-size: 1.1rem; /* �ker teksten litt (standard er ca 1rem) */
+    line-height: 1.7; /* Litt mer luft mellom linjene */
+    color: #222; /* M�rk, lettleselig tekst */
+}
+
+.about h2 {
+    font-size: 1.6rem; /* Gj�r overskriften litt st�rre ogs� */
+    margin-bottom: 1rem;
+}
+
+
+
