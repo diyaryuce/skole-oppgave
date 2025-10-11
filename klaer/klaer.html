@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Klær og skotøy i Bergen – RB</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #000;
+      background: white;
+	  font-size: 25px;
+    }
+    h1 {
+      margin-top: 0;
+	  font-size: 2em;
+	  text-align: center;
+    }
+	  h2 {
+      margin-top: 50px;
+	    margin-left: -25px;
+	    font-size: 1.25em;
+	    text-align: center;
+    }
+	  h3 {
+        margin-top: 50px;
+	    font-size: 1.5em;
+	    text-align: center;
+	  }
+	  h4 {
+      margin-top: 50px;
+	    font-size: 1.5em;
+	    text-align: center;
+	  }
+	  h5 {
+      margin-top: 80px;
+	  margin-left: 0px;
+	  font-size: 1.5em;
+	  text-align: center;
+	  }
+    p {
+      margin-bottom: 1em;
+    }
+    main {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 75px 10px;
+    }
+    section {
+      margin-bottom: 1.5em;
+    }
+    figure {
+      margin: 1.5em 0;
+      text-align: center;
+    }
+    figcaption {
+      font-size: 0.9em;
+      margin-top: 0.3em;
+    }
+
+    /* header og footer */
+    header, footer {
+      display: flex;
+	  gap: 75px;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 32px;
+      background: #fff;
+    }
+    header {
+      border-bottom: 1px solid #000;
+    }
+    footer {
+      border-top: 1px solid #000;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 0.5em;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 2em;
+    }
+    nav a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    /* tabell */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.5em 0;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: left;
+    }
+    caption {
+      margin-bottom: 0.5em;
+      font-weight: bold;
+    }
+
+    /* layout */
+    .flex {
+      display: flex;
+      gap: 1.5em;
+      align-items: flex-start;
+    }
+	  figure img {
+	    display: block;
+	  }
+    .flex figure {
+      margin: 0;
+    }
+	  .flex img.leftpic {
+	    margin-left: 30px;
+	    margin-top: 0px;
+	  }
+	  .flex img.rightpic {
+	    margin-left: 0px;
+	    margin-top: 65px;
+	  }
+	  .flex img.midpic {
+	    margin-left: 30px;
+	   margin-top: 60px;
+	  }
+    .col-3 {
+      display: flex;
+      gap: 1.5em;
+	    font-size: 0.75em;
+    }
+    .col-3 > div {
+      flex: 1;
+    }
+	  .centered {
+	    display: inline-block;
+	    text-align: left;
+	    margin-left: 225px;
+	    margin-top: -20px;
+	    list-style-position: inside;
+	    font-size: 30px;
+	  }
+	  .pee {
+	    margin-top: -25px;
+  	}
+	  .peetwo {
+	   margin-top: 0px;
+	  }
+    .copyright {
+      flex-basis: 100%;
+      text-align: center;
+      margin-top: 1em;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+	<figure>
+      <img src="bilder/logo.png"  alt="" width="150"/>
+    </figure>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#">Hjem</a></li>
+	  <li><a href="#">Klær</a></li>
+      <li><a href="#">Hus</a></li>
+      <li><a href="#">Om oss</a></li>
+	  <li><a href="#">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="flex">
+    <div>
+      <h1>Klær og skotøy i Bergen</h1>
+      <p>Bergen er kjent for å være en av Europas mest regnfulle byer, med mer enn 200 regndager i året. Dette stiller spesielle krav til hvordan man kler seg, både til hverdags og når man skal på tur.</p>
+	  <p>Riktig bekledning handler ikke bare om komfort, men også om helse, praktisk bruk og økonomi.</p>
+    </div>
+    <figure>
+      <img src="bilder/regngutt.png" width="950" alt="" class="leftpic"/>
+    </figure>
+  </section>
+
+  <div>
+    <figure>
+      <img src="bilder/brd.png" width="1520" height="750" alt="" />
+    </figure>
+  </div>
+
+  <section class="flex">
+    <figure>
+      <img src="bilder/bryggen.png" width="750"  alt="" class="rightpic"/>
+    </figure>
+    <div>
+      <h2>Klima og værforhold i Bergen</h2>
+      <p>Nedbøren i Bergen kommer ofte i form av regn, men også som yr og lett duskregn som kan vare i timevis. Ofte følger vinden med, og når regnet piskes sidelengs blir paraplyer mer til hinder enn til hjelp. Klimaet preges også av store variasjoner i temperatur: sommeren kan være mild, men fortsatt våt, mens vinteren ofte gir en uforutsigbar blanding av regn, sludd og snø.</p>
+	  <p>Disse forholdene gjør at man må tenke mer helhetlig når man velger klær. De bør ikke bare være vanntette, men også pustende, vindtette og tilpasset raske værskifter i et klima med høy luftfuktighet.</p>
+    </div>
+  </section>
+
+  <section>
+    <h4>Sjekkeliste - basisutstyr</h4>
+    <ul class="centered">
+      <li>Vanntett jakke med hette (skalljakke anbefales fremfor enkel regnjakke)</li>
+      <li>Vanntette sko eller støvler tilpasset både bybruk og natur</li>
+      <li>Regnbukse eller overtrekks bukse til lengre opphold ute</li>
+      <li>Sekk med regntrekk for å beskytte bøker, PC og personlige eiendeler</li>
+      <li>Ekstra sokker og et ekstra skift til uforutsette situasjoner</li>
+    </ul>
+  </section>
+
+  <section class="flex">
+	<div>
+      <h2>Sammenligning av vanlige regnplagg</h2>
+      <p>Tabellen viser hvordan de ulike plaggene har forskjellige bruksområder. Mange kombinerer skalljakke og regnbukse til daglig bruk, mens støvler og gamasjer er mest aktuelle for friluftsliv.</p>
+	</div>
+	<table>
+      <thead>
+        <tr>
+          <th>Plagg</th><th>Bruksområde</th><th>Vedlikehold</th><th>Prisnivå</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Skalljakke</td><td>By og tur</td><td>Impregneres 2-3 ganger per år</td><td>Middels–høyt</td></tr>
+        <tr><td>Regnponcho</td><td>Sykkel, korte turer</td><td>Tørkes raskt, unngå varme</td><td>Lavt</td></tr>
+        <tr><td>Støvler</td><td>By og natur</td><td>Vask og smøring jevnlig</td><td>Middels</td></tr>
+		<tr><td>Gamasjer</td><td>Tur i marka, våt vegetasjon</td><td>Ristes og tørkes etter bruk</td><td>Lavt-middels</td></tr>
+        <tr><td>Regnbukse</td><td>Lenger uteopphold, pendling</td><td>Vask og impregner ved behov</td><td>Middels</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="col-3">
+    <div>
+      <h3>Vanlige feil å unngå</h3>
+      <ul><li>Kun bruke paraply: fungerer i lett regn, men er upraktisk i vind og langvarig nedbør.</li><li>Bruke bomull innerst: bomull blir tungt og kaldt når det blir vått, i motsetning til ull.</li><li>Ikke vedlikeholde klærne: uten impregnering mister plaggene raskt evnen til å holde tett.</li><li>Tørke sko på varmeovner: dette kan skade materialet og redusere levetiden.</li></ul>
+    </div>
+    <div>
+      <h3>Tips for studenter og pendlere</h3>
+      <ul><li>Ha alltid en lett regnjakke eller poncho i sekken fordi været kan endre seg raskt.</li><li>Bruk en sekk med regntrekk for å beskytte laptop, bøker og notater.</li><li>Invester i et par gode sko som kan brukes både på vei til forelesning og på fritiden.</li><li>Legg et ekstra par sokker eller en tynn genser i sekken, små tiltak kan gjøre en stor forskjell.</li><li>For syklister: regnponcho eller regnbukse gjør hverdagen langt mer praktisk.</li></ul>
+    </div>
+    <div>
+      <h3>Vedlikehold</h3>
+      <ul><li>Vask skalljakker og regnbukser med spesialmiddel for membranplagg.</li><li>Ikke bruk tøymykner, da dette tetter porene i stoffet.</li><li>Impregner klær og sko jevnlig for å opprettholde vanntetthet.</li><li>Tørk klær og sko i romtemperatur; bruk avispapir i støvler for raskere tørking.</li><li>Oppbevar klær på et tørt sted, fuktige klesskap kan skape lukt og mugg.</li></ul>
+    </div>
+  </section>
+
+  <section class="flex">
+    <figure>
+      <img src="bilder/regnutstyr.png" width="500"  alt="" class="rightpic"/>
+    </figure>
+    <div>
+      <h5>Regnutstyr for Bergen</h5>
+	  <p class="pee">Man kan kjøpe regnutstyr i Bergen på flere steder. Stormberg tilbyr rimelige regnjakker og har ofte studentrabatter. Hos XXL og Intersport finner man et bredt sortiment av regnklær og sko. Bruktbutikker som Fretex gir et rimelig og bærekraftig alternativ, og i tillegg finnes det muligheter for å handle på nett, hvor flere leverandører tilbyr komplette pakker levert rett hjem.</p>
+	  <p>Ved å kombinere nye og brukte alternativer kan man redusere kostnader uten å gå på kompromiss med kvalitet.</p>
+    </div>
+  </section>
+ 
+   <div>
+    <figure>
+      <img src="bilder/regnut.png" width="1520" height="750" alt="" />
+    </figure>
+  </div>
+
+</main>
+
+<footer>
+  <div class="logo">
+    <img src="bilder/logo.png" alt="RB Logo" width="150"/>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#">Kontakt oss</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </nav>
+  <small>© 2025 Regnbyen Bergen A/S. All rights NOT reserved lol.</small>
+</footer>
+
+</body>
+</html>

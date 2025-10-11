@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nettside eksempel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    /* Navigasjonsmeny */
+    .navbar {
+      display: flex;
+      justify-content: center;   /* plasser alt i midten */
+      align-items: center;
+      padding: 45px 40px;
+      background-color: #f4f4f4;
+      border-bottom: 1px solid #ddd;
+      gap: 80px; /* 🚀 avstand mellom logo og meny */
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 110px; /* avstand mellom menyknapper */
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 19px;
+    }
+
+    .navbar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero bilde */
+    .hero {
+      background-image: url("https://via.placeholder.com/1500x800");
+      background-size: cover;    /* dekker hele flaten */
+      background-position: center;
+      height: 60vh;              /* 60% av skjermhøyden */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    /* Informasjonsseksjon */
+    .info {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 20px;
+      background-color: #fff;
+    }
+
+    .info div {
+      width: 25%;
+    }
+
+    .info h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      font-size: 14px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+	.hero {
+	height: 1vh; /* var 60vh, nå mindre */
+	}
+	.bordered {
+	border: 10px solid black;
+	}
+	.logo {
+	font-weight: bold;
+	font-size: 18px;
+	margin-right: 50px; /* 🚀 bestemmer avstanden til "Hjem" */
+	}
+
+
+  </style>
+</head>
+<body>
+  <!-- Navigasjonsmeny -->
+  <nav class="navbar">
+    <div class="logo">Logo</div>
+    <ul>
+      <li><a href="#">Hjem</a></li>
+      <li><a href="#">Klær</a></li>
+      <li><a href="#">Hus</a></li>
+      <li><a href="#">Om oss</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </nav>
+  
+  	 <img class="bordered" src="regnbergen11.jpg" width="1687" height="650" alt=""/>
+
+  <!-- Hero seksjon -->
+  <div class="hero">
+    Velkommen!
+  </div>
+
+  <!-- Info seksjon -->
+  <section class="info">
+    <div>
+      <h3>Om oss</h3>
+      <p>Vi er en engasjert gruppe studenter i Bergen som brenner for miljø, kultur og fellesskap. 
+	  Gjennom våre initiativ ønsker vi å bidra positivt til byen, hjelpe mennesker og gjøre det enklere for folk.</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p>Tlf: 47364528 <br>
+		 Epost : regnby25@hotmail.com <br>
+		 Adresse : indalsveien 27, 5038 Bergen
+		 </p>
+    </div>
+    <div>
+      <h3>Frakt</h3>
+      <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent 
+      delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an.</p>
+    </div>
+  </section>
+</body>
+</html>
