@@ -10,11 +10,12 @@
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #222;
+    text-decoration: none;
 }
 
 .container {
-    width: 95%;
-    max-width: 1248px;
+    width: 100%;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
@@ -42,178 +43,6 @@ li {
     background: #004c99;
 }
 
-
-/* ------------------------------
-   End of Global styles
----------------------------------*/
-
-/* ------------------------------
-   Logo & Header styles
----------------------------------*/
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    text-decoration: none;
-}
-
-.logo-img {
-    height: 66px; /* styr høyden, bredden følger automatisk */
-    width: auto;
-    display: block;
-    object-fit: contain;
-}
-
-.download-logo a {
-    display: inline-block;
-    margin-top: .5rem;
-    padding: .4rem .8rem;
-    border-radius: 6px;
-    background: #0066cc;
-    color: #fff;
-    text-decoration: none;
-}
-
-.download-logo a:hover {
-    background: #004c99;
-}
-
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100; /* over hero-bildet */
-    background: #fff; /* solid bakgrunn s� tekst ikke skinner gjennom */
-    border-bottom: 1px solid #ddd;
-}
-
-.header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #0066cc;
-    text-decoration: none;
-}
-
-.main-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-    .main-nav a.active,
-    .main-nav a:hover {
-        color: #0066cc;
-    }
-
-/* Burgerknapp skjult desktop */
-.menu-toggle {
-    display: none;
-}
-
-/* ------------ Alternative Nav bar styles ----------*/
-.header-nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-} 
-
-.nav-menu {
-    width: 70%;
-    min-width: 600px;
-    height: 16vh;
-    display: flex;
-    justify-content: space-around;
-    align-items:center;
-    margin: auto;
-}
-
-.navlink {
-    position: relative;
-    text-decoration: none;
-    font-size: 30px;
-    font-family: sans-serif;
-    text-transform: capitalize;
-    color: black;
-    padding: 0 10px;
-}
-
-
-/* ------------------------------
-   End of Logo & Header styles
----------------------------------*/
-
-/* ------------------------------
-   HERO
----------------------------------*/
-/* --- Hero med bakgrunnsbilde --- */
-.hero {
-    position: relative;
-    padding: calc(5rem + var(--header-h, 64px)) 0 5rem;
-    background: url("public/img/hero-aktiviteter.jpg") center/cover no-repeat;
-    color: #fff;
-}
-
-/* --- Gradient over bakgrunnsbilde --- */
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.25));
-}
-
-/* VIKTIG: bruk samme containerbredde og VENSTRE-justering som header/kort */
-.hero-inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: start; /* <-- flytt innholdet til venstre */
-    text-align: left; /* <-- venstre-tekst i stedet for senter */
-    row-gap: 1rem;
-}
-
-.hero-text {
-    max-width: 60ch;
-    align-items: left;
-}
-
-.hero-tittel {
-    text-align: left;
-}
-
-.hero-text h1 {
-    margin-bottom: .5rem;
-}
-
-/* Skjul evt. hero-bildet i HTML n�r bakgrunn brukes */
-.hero-media {
-    display: none;
-}
-
-/* P� smale skjermer kan du sentrere igjen om du vil */
-@media (max-width: 700px) {
-    .hero-inner {
-        justify-items: center;
-        text-align: center;
-    }
-}
-
-/* ------------------------------
-   TYPOGRAPHY
----------------------------------*/
 h1 {
     margin-top: 0;
     font-size: 2em;
@@ -264,9 +93,6 @@ figcaption {
     margin-top: 0.3em;
 }
 
-/* ------------------------------
-   TABLES
----------------------------------*/
 table {
     border-collapse: collapse;
     width: 100%;
@@ -283,6 +109,147 @@ caption {
     margin-bottom: 0.5em;
     font-weight: bold;
 }
+
+
+/* ------------------------------
+   End of Global styles
+---------------------------------*/
+
+/* ------------------------------
+   Logo & Header/Navbar styles
+---------------------------------*/
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+    background: #fff; 
+    border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    height: 70px; 
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.navbar {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.active {
+    color: #0066cc;
+    font-weight: bold;
+}
+
+
+/* ------------------------------
+   End of Logo & Header styles
+---------------------------------*/
+
+
+/* ------------------------------
+   Footer styles
+---------------------------------*/
+
+
+footer {
+    display: flex;
+    gap: 75px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    background: #222;
+    color: #eee;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+
+/* ------------------------------
+   End of Footer styles
+---------------------------------*/
+
+/* ------------------------------
+   Hero main section
+---------------------------------*/
+.hero {
+    position: relative;
+    padding: calc(5rem + var(--header-h, 64px)) 0 5rem;
+    background: url("public/img/hero-aktiviteter.jpg") center/cover no-repeat;
+    color: #fff;
+}
+
+/* --- Gradient over bakgrunnsbilde --- */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.25));
+}
+
+/* VIKTIG: bruk samme containerbredde og VENSTRE-justering som header/kort */
+.hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start; /* <-- flytt innholdet til venstre */
+    text-align: left; /* <-- venstre-tekst i stedet for senter */
+    row-gap: 1rem;
+}
+
+.hero-text {
+    max-width: 60ch;
+    align-items: left;
+}
+
+.hero-tittel {
+    text-align: left;
+}
+
+.hero-text h1 {
+    margin-bottom: .5rem;
+}
+
+/* Skjul evt. hero-bildet i HTML n�r bakgrunn brukes */
+.hero-media {
+    display: none;
+}
+
+/* På smale skjermer kan du sentrere igjen om du vil */
+@media (max-width: 700px) {
+    .hero-inner {
+        justify-items: center;
+        text-align: center;
+    }
+}
+
+/* ------------------------------
+   TABLES
+---------------------------------*/
+
 
 /* ------------------------------
    LAYOUT UTILITIES
@@ -444,47 +411,6 @@ figure img {
 
 
 /* ------------------------------
-   FOOTER
----------------------------------*/
-.site-footer {
-    background: #222;
-    color: #eee;
-    padding: 1rem 0;
-}
-
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-    .footer-inner ul {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
-    }
-
-    .footer-inner a {
-        color: #eee;
-        text-decoration: none;
-    }
-
-        .footer-inner a:hover {
-            text-decoration: underline;
-        }
-
-/* --- Alternative Footer styles --- */
-footer {
-    display: flex;
-    gap: 75px;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 32px;
-    background: #fff;
-}
-
-/* ------------------------------
    RESPONSIVT DESIGN
 ---------------------------------*/
 @media (max-width: 900px) {
@@ -613,26 +539,7 @@ footer {
 
 
 
-/* ------------------------------
-   NAVBAR (Alternative Navigation)
----------------------------------*/
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 40px;
-    background: white;
-    border-bottom: 1px solid #ccc;
-}
 
-.navbar .logo {
-    height: 80px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 15px;
-}
 
 .nav-btn {
     background: #333;
@@ -826,29 +733,8 @@ footer {
     line-height: 1.3;
 }
 
-.card-content .btn {
-    display: inline-block;
-    padding: 8px 16px;
-    background: #800020;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-top: 16px;
-    color: #fff;
-}
 
-.card-content .btn:hover {
-    background: #600018;
-}
 
-/* ------------------------------
-   HERO IMAGE VARIATIONS
----------------------------------*/
-.hero-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0;
-}
 
 /* ------------------------------
    RESPONSIVE DESIGN - Additional
@@ -895,3 +781,4 @@ footer {
         max-width: 400px;
     }
 }
+

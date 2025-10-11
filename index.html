@@ -13,17 +13,17 @@
 <body>
 
     <!-- Toppmeny (match wireframe med logo + lenker) -->
-    <header class="site-header" role="banner">
+    <header class="site-header" >
         <div class="container header-inner">
-            <a href="index.html" class="logo" aria-label="Regnbyen Bergen AS">
+            <a href="index.html">
                 <img src="public/logo/logo.png"
                      alt="RB – Regnbyen Bergen AS"
-                     class="logo-img"
-                     width="40" height="40" loading="eager">
+                     class="logo"
+                     width="40" height="40" loading="eager" />
             </a>
 
-            <nav class="main-nav" aria-label="Hovedmeny">
-                <ul>
+            <nav>
+                <ul class="navbar">
                     <li><a class="active" href="index.html" aria-current="page">Hjem</a></li>
                     <li><a href="om-oss.html">Om prosjektet</a></li>
                     <li><a href="klaer.html">Klær &amp; sko</a></li>
@@ -38,10 +38,6 @@
         </div>
     </header>
 
-
-
-
-<!-- HOVEDINNHOLD -->
 <main>
   <section class="card-container">
     <div class="card">
@@ -61,22 +57,21 @@
   </section>
 </main>
 
-    <footer class="site-footer" role="contentinfo">
-      <div class="container footer-inner">
-          <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
-          <nav aria-label="Bunnmeny">
-              <ul>
-                  <li><a href="tilgjengelighet.html">Tilgjengelighet</a></li>
-                  <li><a href="personvern.html">Personvern</a></li>
-                  <li><a href="kontakt.html">Kontakt</a></li>
-              </ul>
-          </nav>
+    <footer>
+      <div class="container">
+          <div class="footer-inner">
+              <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
+            <div>
+                <ul class="footer-menu">
+                    <li><a href="tilgjengelighet.html">Tilgjengelighet</a></li>
+                    <li><a href="personvern.html">Personvern</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+          </div>
       </div>
-      <script>
-    // liten hjelp for årstall, ingen styling
-    document.getElementById('year').textContent = new Date().getFullYear();
-      </script>
   </footer>
 
+  <script src="main.js" />
 </body>
 </html>
