@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RB � Aktiviteter i Bergen når det regner (BRH-5)</title>
+    <meta name="description" content="Forslag til innend�rs og utend�rs aktiviteter i Bergen n�r det regner.">
+    <!-- Link til felles stilark i del 2 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+    <!-- Toppmeny (match wireframe med logo + lenker) -->
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="Regnbyen Bergen AS">
+                <img src="public/logo/logo.png"
+                     alt="RB – Regnbyen Bergen AS"
+                     class="logo-img"
+                     width="40" height="40" loading="eager">
+            </a>
+
+            <nav class="main-nav" aria-label="Hovedmeny">
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="om-oss.html">Om prosjektet</a></li>
+                    <li><a href="klaer.html">Klær &amp; sko</a></li>
+                    <li><a href="hus.html">Hus</a></li>
+                    <li><a href="bil.html">Bil</a></li>
+                    <li><a href="sosialearagementer.html"> Sosialegrupper</a></li>
+                    <li><a class="active" href="aktiviteter.html" aria-current="page">Aktiviteter</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">Meny</button>
+        </div>
+    </header>
+
+    <main id="innhold">
+        <!-- Hero-seksjon (stor bildeplassering + tittel/intro) -->
+        <section class="hero" aria-labelledby="hero-tittel">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h1 class="hero-tittel">Hva kan du gjøre i Bergen når det regner?</h1>
+                    <p>Bergen er kjent for sitt regn, men byen har mange spennende innen-dørs og ute-dørs aktiviteter.</p>
+                </div>
+             
+            </div>
+        </section>
+
+        <!-- Kort-rutenett (2 rader x 3 kort som i wireframe) -->
+        <section class="card-grid container" aria-labelledby="seksjon-aktiviteter">
+            <h2 id="seksjon-aktiviteter" class="visually-hidden">Aktivitetsforslag</h2>
+
+            <!-- Rad 1 -->
+            <div class="grid-row">
+                <article class="card">
+                    <figure class="card-media">
+                        <img src="public/img/museum.jpg" alt="Utstilling i et bergensmuseum">
+                    </figure>
+                    <div class="card-body">
+                        <h3>Besøk et museum</h3>
+                        <p>Utforsk Bergens rike kulturhistorie på byens mest kjente og eldste museer.</p>
+                        <div class="card-actions">
+                            <a class="btn-link" href="museum.html">Les mer</a>
+                            <a class="btn" href="" target="_blank" rel="noopener">Bestill</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <figure class="card-media">
+                        <img src="public/img/escaperoom.jpg" alt="Gruppe som læser oppgaver i et escape room">
+                    </figure>
+                    <div class="card-body">
+                        <h3>Escape Room</h3>
+                        <p>Prøv et spennende og utfordrende escape room med dine venner eller familie.</p>
+                        <div class="card-actions">
+                            <a class="btn-link" href="escape-room.html">Les mer</a>
+                            <a class="btn" href="https://www.escaperoombergen.no" target="_blank" rel="noopener">Bestill</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <figure class="card-media">
+                        <img src="public/img/floy.jpg" alt="Fløibanen på vei opp fjellet i lett regn">
+                    </figure>
+                    <div class="card-body">
+                        <h3>Fløibanen</h3>
+                        <p>Ta deg en tur til en av Bergens syv fjelltopper med den ryddige fjellbanen.</p>
+                        <div class="card-actions">
+                            <a class="btn-link" href="floibanen.html">Les mer</a>
+                            <a class="btn" href="https://www.floyen.no" target="_blank" rel="noopener">Billetter</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Rad 2 -->
+            <div class="grid-row">
+                <article class="card">
+                    <figure class="card-media">
+                        <img src="public/img/akvariet.jpg" alt="Pingviner i Akvariet i Bergen">
+                    </figure>
+                    <div class="card-body">
+                        <h3>Akvariet i Bergen</h3>
+                        <p>Oppdag livet under vann på akvariet i Nordnes, spennende for både store og små.</p>
+                        <div class="card-actions">
+                            <a class="btn-link" href="akvariet.html">Les mer</a>
+                            <a class="btn" href="https://www.akvariet.no" target="_blank" rel="noopener">Billetter</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <figure class="card-media">
+                        <img src="public/img/fisketorget.jpg" alt="Bod med fersk sj�mat p� Torget">
+                    </figure>
+                    <div class="card-body">
+                        <h3>Bergen Sjømat</h3>
+                        <p>Smak på de ferskeste råvarene ved Fisketorget perfekt stopp mellom de syvfjellene.</p>
+                        <div class="card-actions">
+                            <a class="btn-link" href="sjoemat.html">Les mer</a>
+                            <a class="btn" href="https://www.bergen.kommune.no/hvaskjer/tema/fisketorget/drift-av-fisketorget#:~:text=Fisketorgets%20utetorg%20er%20%C3%A5pent%20i%20sommersesongen%2001.%20mai,30.04%20ryddes%20Fisketorget%20og%20gj%C3%B8res%20om%20til%20byrom." target="_blank" rel="noopener">Se åpningstider</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <figure class="card-media">
+                        <img src="public/img/vilvite.jpg" alt="Barn og voksne som pr�ver interaktive eksperimenter p� VilVite">
+                    </figure>
+                    <div class="card-body">
+                        <h3>VilVite vitensenter</h3>
+                        <p>Stort og interaktivt vitensenter for nysgjerrige i alle aldre og masse innendørs eksperimenter.</p>
+                        <div class="card-actions">
+                            <a class="btn-link" href="vilvite.html">Les mer</a>
+                            <a class="btn" href="https://www.vilvite.no" target="_blank" rel="noopener">Billetter</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
+            <nav aria-label="Bunnmeny">
+                <ul>
+                    <li><a href="tilgjengelighet.html">Tilgjengelighet</a></li>
+                    <li><a href="personvern.html">Personvern</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+      // liten hjelp for �rstall, ingen styling
+      document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+</html>

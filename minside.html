@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Min side – Regnbyen Bergen AS</title>
+    <!-- Hvis CSS-en din ligger i /css/styles.css, bytt href til css/styles.css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#innhold">Hopp til innhold</a>
+
+    <!-- Toppmeny (match wireframe med logo + lenker) -->
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a href="index.html" class="logo" aria-label="Regnbyen Bergen AS">
+                <img src="public/logo/logo.png"
+                     alt="RB – Regnbyen Bergen AS"
+                     class="logo-img"
+                     width="40" height="40" loading="eager">
+            </a>
+
+            <nav class="main-nav" aria-label="Hovedmeny">
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="om-oss.html">Om prosjektet</a></li>
+                    <li><a href="klaer.html">Klær &amp; sko</a></li>
+                    <li><a href="hus.html">Hus</a></li>
+                    <li><a href="bil.html">Bil</a></li>
+                    <li><a href="sosialearagementer.html"> Sosialegrupper</a></li>
+                    <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">Meny</button>
+        </div>
+    </header>
+
+    <main id="innhold" class="container" style="margin-top:2rem;">
+        <h1>Hei, jeg er Khader</h1>
+        <p>Her er en liten presentasjon av meg.</p>
+
+        <!-- Tabell 1: Bilde + kort bio -->
+        <table class="profile-table" role="table" aria-label="Profil">
+            <tr>
+                <td class="photo-cell" style="width:260px;">
+                    <figure class="profile-figure">
+                        <!-- Legg bildet ditt som images/meg.jpg -->
+                        <img src="public/img/khader.jpg" alt="Bilde av Khader" class="profile-photo">
+                        <figcaption>Khader Daraghma</figcaption>
+                    </figure>
+                </td>
+                <td>
+
+                    <section class="about">
+                        <h2>Om meg</h2>
+                        <p>
+                            Jeg heter Khader, og jeg kommer fra Palestina. Jeg er en positiv og nysgjerrig person som liker å lære nye ting og utvikle meg både faglig og personlig.
+                            Jeg interesserer meg for teknologi, problemløsing og kreativ tenkning, og jeg liker å finne nye måter å forstå hvordan ting fungerer på.
+                        </p>
+                        <p>
+                            Jeg verdsetter samarbeid og liker å bidra til gode løsninger, enten det handler om skoleprosjekter, arbeid eller personlige mål.
+                            Jeg tror på at man alltid kan lære noe nytt – og det er det som motiverer meg hver dag.
+                        </p>
+                    </section>
+
+                </td>
+            </tr>
+        </table>
+
+        <!-- Tabell 2: Fakta/egenskaper -->
+        <h2 style="margin-top:2rem;">Fakta</h2>
+        <table class="info-table" role="table" aria-label="Informasjon">
+            <thead>
+                <tr>
+                    <th>Felt</th>
+                    <th>Detaljer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Født</td>
+                    <td>20/10/2004</td>
+                </tr>
+                <tr>
+                    <td>Utdanning</td>
+                    <td>Dataingeniør</td>
+                </tr>
+                <tr>
+                    <td>Ferdigheter</td>
+                    <td>Grunnlegende: HTML/CSS, Java, Python, Sql</td>
+                </tr>
+                <tr>
+                    <td>Språk</td>
+                    <td>Arabisk, norsk, engelsk</td>
+                </tr>
+                <tr>
+                    <td>Kontakt</td>
+                    <td><a href="mailto:khadermdaraghma@gmail.com">khadermdaraghma@gmail.com</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Tilbake-lenke -->
+        
+        <p>
+            <a class="btn back-btn" href="index.html">Tilbake til forsiden</a>
+        </p>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
+            <nav aria-label="Bunnmeny">
+                <ul>
+                    <li><a href="tilgjengelighet.html">Tilgjengelighet</a></li>
+                    <li><a href="personvern.html">Personvern</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+</html>
