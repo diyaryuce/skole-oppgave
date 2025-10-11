@@ -1,22 +1,21 @@
 /* ------------------------------
-   Reset & grunnoppsett
+   Global styles
 ---------------------------------*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    font-size: 16px;
     scroll-behavior: smooth;
-}
-
-body {
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #222;
-    background-color: #f9f9f9;
+}
+
+.container {
+    width: 95%;
+    max-width: 1248px;
+    margin: 0 auto;
 }
 
 li {
@@ -28,28 +27,29 @@ li {
     color: darkblue;
 }
 
-
-
-/* Tilgjengelighetssnarvei */
-.skip-link {
-    position: absolute;
-    left: -999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+.btn {
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    background: #0066cc;
+    color: #fff;
+    transition: background 0.2s ease;
+    display: inline-block;
 }
 
-    .skip-link:focus {
-        position: static;
-        width: auto;
-        height: auto;
-        padding: 0.5rem;
-        background: #222;
-        color: #fff;
-        z-index: 1000;
-    }
-/*LOGO STYLING*/
+.btn:hover {
+    background: #004c99;
+}
+
+
+/* ------------------------------
+   End of Global styles
+---------------------------------*/
+
+/* ------------------------------
+   Logo & Header styles
+---------------------------------*/
 
 .logo {
     display: flex;
@@ -59,7 +59,7 @@ li {
 }
 
 .logo-img {
-    height: 66px; /* styr h�yden, bredden f�lger automatisk */
+    height: 66px; /* styr høyden, bredden følger automatisk */
     width: auto;
     display: block;
     object-fit: contain;
@@ -75,24 +75,10 @@ li {
     text-decoration: none;
 }
 
-    .download-logo a:hover {
-        background: #004c99;
-    }
-
-
-
-/* ------------------------------
-   Globale containere
----------------------------------*/
-.container {
-    width: 95%;
-    max-width: 1400px;
-    margin: 0 auto;
+.download-logo a:hover {
+    background: #004c99;
 }
 
-/* ------------------------------
-   HEADER
----------------------------------*/
 .site-header {
     position: sticky;
     top: 0;
@@ -164,6 +150,10 @@ li {
     padding: 0 10px;
 }
 
+
+/* ------------------------------
+   End of Logo & Header styles
+---------------------------------*/
 
 /* ------------------------------
    HERO
@@ -426,9 +416,9 @@ figure img {
     color: #fff;
 }
 
-    .btn:hover {
-        background: #004c99;
-    }
+.btn:hover {
+    background: #004c99;
+}
 
 .btn-link {
     color: #0066cc;
@@ -594,20 +584,7 @@ footer {
 }
 
 /* --- Tilbake-knapp p� minside --- */
-.btn {
-    padding: 0.6rem 1.2rem;
-    text-decoration: none;
-    font-size: 0.95rem;
-    border-radius: 6px;
-    background: #0066cc;
-    color: #fff;
-    transition: background 0.2s ease;
-    display: inline-block;
-}
 
-    .btn:hover {
-        background: #004c99;
-    }
 
 /* --- Egen stil for tilbake-knappen p� minside --- */
 .back-btn {
@@ -636,3 +613,285 @@ footer {
 
 
 
+/* ------------------------------
+   NAVBAR (Alternative Navigation)
+---------------------------------*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background: white;
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar .logo {
+    height: 80px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn {
+    background: #333;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: #e04e2a; /* orange hover/focus */
+}
+
+/* ------------------------------
+   INTRO SECTION
+---------------------------------*/
+.intro-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+/* ------------------------------
+   BILDE OG REKLAME (Image + Ad Section)
+---------------------------------*/
+.bilde-og-reklame {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.bilde-utstyr img {
+    width: 650px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    max-width: 100%;
+}
+
+/* Reklameboks (Advertisement Box) */
+.reklame {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 350px;
+    flex-shrink: 0;
+}
+
+.reklame img.reklamebilde {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.reklame h4 {
+    margin: 10px 0 5px;
+    color: #333;
+    font-size: 17px;
+}
+
+.reklame p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.reklame .btn {
+    display: inline-block;
+    background: #e04e2a;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.reklame .btn:hover {
+    background: #333;
+}
+
+/* ------------------------------
+   SJEKKLISTE OG REKLAME (Checklist + Ad)
+---------------------------------*/
+.sjekkliste-og-reklame {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-color: #f7f7ff;
+}
+
+.sjekkliste {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+.sjekkliste h4 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.sjekkliste ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+.reklame-side {
+    flex: 0 0 300px;
+    text-align: center;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.reklame-side img.reklamebilde {
+    width: 100%;
+    height: 270px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.reklame-side h4 {
+    margin-bottom: 0.5rem;
+}
+
+.reklame-side p {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* ------------------------------
+   ADDITIONAL CARD STYLES
+---------------------------------*/
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 118px;
+}
+
+.card {
+    width: 450px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.card-content .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #800020;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #fff;
+}
+
+.card-content .btn:hover {
+    background: #600018;
+}
+
+/* ------------------------------
+   HERO IMAGE VARIATIONS
+---------------------------------*/
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN - Additional
+---------------------------------*/
+@media (max-width: 960px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .bilde-og-reklame {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bilde-utstyr img {
+        width: 100%;
+    }
+
+    .reklame {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .sjekkliste-og-reklame {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reklame-side {
+        max-width: 400px;
+    }
+}

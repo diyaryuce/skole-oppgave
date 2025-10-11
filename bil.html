@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+        <!--Stylesheet CSS-->
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    <body>
+        
+        <!-- Toppmeny (match wireframe med logo + lenker) -->
+        <header class="site-header" role="banner">
+            <div class="container header-inner">
+                <a href="index.html" class="logo" aria-label="Regnbyen Bergen AS">
+                    <img src="public/logo/logo.png"
+                        alt="RB – Regnbyen Bergen AS"
+                        class="logo-img"
+                        width="40" height="40" loading="eager">
+                </a>
+
+                <nav class="main-nav" aria-label="Hovedmeny">
+                    <ul>
+                        <li><a class="active" href="index.html" aria-current="page">Hjem</a></li>
+                        <li><a href="om-oss.html">Om prosjektet</a></li>
+                        <li><a href="klaer.html">Klær &amp; sko</a></li>
+                        <li><a href="hus.html">Hus</a></li>
+                        <li><a href="bil.html">Bil</a></li>
+                        <li><a href="sosialearagementer.html"> Sosialegrupper</a></li>
+                        <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">Meny</button>
+            </div>
+        </header>
+
+        
+    
+        
+        <main>
+            <img src="public/img/car1.png" width="1800" style="margin-top: 20px;">
+            <div class="card-container">
+                <div class="card">
+                    <img src="public/img/AWD.png">
+                    <div class="card.content">
+                    <h3>firehjulstrekk</h3>
+                    <p>
+                        Firehjulstrekk er nyttig i Bergen fordi det ofte regner og veiene kan bli glatte. Systemet gir bedre grep og kontroll, spesielt i bakker og på våte veier. Mange velger biler med firehjulstrekk for å føle seg tryggere i byens bratte gater og når de kjører utenfor sentrum.
+                    </p>
+                    <a href=""class="btn">les mer</a>
+
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="public/img/bildekk.png">
+                    <div class="card.content">
+                    <h3>dekkvalg</h3>
+                    <p>
+                        Anbefalte merker som takler regn og våte veier godt er Michelin, Continental, Nokian, Goodyear og Bridgestone. Disse er kjent for god gripeevne, effektiv vannavrenning og høy slitestyrke,perfekt for Bergens regnfulle klima.
+                    </p>
+                    <a href=""class="btn">les mer</a>
+
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="public/img/veier.png">
+                    <div class="card.content">
+                    <h3>veier</h3>
+                    <p>
+                    Bergens veier er ofte bratte, svingete og glatte på grunn av det fuktige klimaet. Regn og løv kan gjøre veibanen glatt selv på sommeren. God drenering og jevn vedlikehold er viktig for trafikksikkerhet, men sjåfører må også tilpasse farten til forholdene.
+                    </p>
+                    <a href=""class="btn">les mer</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="site-footer" role="contentinfo">
+            <div class="container footer-inner">
+                <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
+                <nav aria-label="Bunnmeny">
+                    <ul>
+                        <li><a href="tilgjengelighet.html">Tilgjengelighet</a></li>
+                        <li><a href="personvern.html">Personvern</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <script>
+          // liten hjelp for årstall, ingen styling
+          document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
+        </footer>
+        
+    </body>
+</html>
