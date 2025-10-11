@@ -55,7 +55,7 @@ body {
 }
 
 .logo-img {
-    height: 66px; /* styr høyden, bredden følger automatisk */
+    height: 66px; /* styr hï¿½yden, bredden fï¿½lger automatisk */
     width: auto;
     display: block;
     object-fit: contain;
@@ -93,7 +93,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100; /* over hero-bildet */
-    background: #fff; /* solid bakgrunn så tekst ikke skinner gjennom */
+    background: #fff; /* solid bakgrunn sï¿½ tekst ikke skinner gjennom */
     border-bottom: 1px solid #ddd;
 }
 
@@ -140,7 +140,7 @@ body {
 .hero {
     position: relative;
     padding: calc(5rem + var(--header-h, 64px)) 0 5rem;
-    background: url("images/hero-aktiviteter.jpg") center/cover no-repeat;
+    background: url("public/img/hero-aktiviteter.jpg") center/cover no-repeat;
     color: #fff;
 }
 
@@ -170,12 +170,12 @@ body {
         margin-bottom: .5rem;
     }
 
-/* Skjul evt. hero-bildet i HTML når bakgrunn brukes */
+/* Skjul evt. hero-bildet i HTML nï¿½r bakgrunn brukes */
 .hero-media {
     display: none;
 }
 
-/* På smale skjermer kan du sentrere igjen om du vil */
+/* Pï¿½ smale skjermer kan du sentrere igjen om du vil */
 @media (max-width: 700px) {
     .hero-inner {
         justify-items: center;
@@ -265,7 +265,7 @@ body {
 
 /* ======== KORTBILDER ======== */
 .card-media {
-    aspect-ratio: 16 / 9; /* alle bilder får samme bredde/høydeforhold */
+    aspect-ratio: 16 / 9; /* alle bilder fï¿½r samme bredde/hï¿½ydeforhold */
     overflow: hidden; /* klipper alt som stikker utenfor */
     border-bottom: 1px solid #eee;
 }
@@ -273,7 +273,7 @@ body {
     .card-media img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* gjør at bildet fyller boksen pent */
+        object-fit: cover; /* gjï¿½r at bildet fyller boksen pent */
         display: block;
     }
 
@@ -325,7 +325,7 @@ body {
 
 @media (max-width: 600px) {
     .main-nav {
-        display: none; /* du kan endre til burger hvis ønsket */
+        display: none; /* du kan endre til burger hvis ï¿½nsket */
     }
 
     .menu-toggle {
@@ -382,7 +382,7 @@ body {
 .info-table thead th {
     text-align: left;
     padding: .85rem 1.1rem;
-    background: #eef3f8; /* lys blå-grå bakgrunn for header */
+    background: #eef3f8; /* lys blï¿½-grï¿½ bakgrunn for header */
     color: #1f2b3a;
     font-weight: 700;
     border-bottom: 1px solid #e3e9f1;
@@ -408,7 +408,7 @@ body {
     }
 }
 
-/* --- Tilbake-knapp på minside --- */
+/* --- Tilbake-knapp pï¿½ minside --- */
 .btn {
     padding: 0.6rem 1.2rem;
     text-decoration: none;
@@ -424,28 +424,28 @@ body {
         background: #004c99;
     }
 
-/* --- Egen stil for tilbake-knappen på minside --- */
+/* --- Egen stil for tilbake-knappen pï¿½ minside --- */
 .back-btn {
-    background: #333; /* mørk grå bakgrunn */
+    background: #333; /* mï¿½rk grï¿½ bakgrunn */
     color: #fff;
     margin-bottom: 1rem; /* luft over footeren */
     margin-top:1rem;
 }
 
     .back-btn:hover {
-        background: #111; /* litt mørkere ved hover */
+        background: #111; /* litt mï¿½rkere ved hover */
     }
 
 
 /* --- Om meg-seksjon --- */
 .about p {
-    font-size: 1.1rem; /* Øker teksten litt (standard er ca 1rem) */
+    font-size: 1.1rem; /* ï¿½ker teksten litt (standard er ca 1rem) */
     line-height: 1.7; /* Litt mer luft mellom linjene */
-    color: #222; /* Mørk, lettleselig tekst */
+    color: #222; /* Mï¿½rk, lettleselig tekst */
 }
 
 .about h2 {
-    font-size: 1.6rem; /* Gjør overskriften litt større også */
+    font-size: 1.6rem; /* Gjï¿½r overskriften litt stï¿½rre ogsï¿½ */
     margin-bottom: 1rem;
 }
 

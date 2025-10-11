@@ -15,6 +15,13 @@ li {
     width: 100%;
 }
 
+.card {
+  background: #2c3e50;
+  color: darkblue;
+}
+
+
+
 
 /* ------------ Nav bar ----------*/
 
@@ -69,6 +76,56 @@ a:hover::before {
 
 
 /* ------------ END OF Nav bar ----------*/
+
+/* ------------------------------
+   HERO
+---------------------------------*/
+/* --- Hero med bakgrunnsbilde --- */
+.hero {
+  position: relative;
+  padding: calc(5rem + var(--header-h, 64px)) 0 5rem;
+  background: url("images/hero-aktiviteter.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+  .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.25));
+  }
+
+/* VIKTIG: bruk samme containerbredde og VENSTRE-justering som header/kort */
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start; /* <-- flytt innholdet til venstre */
+  text-align: left; /* <-- venstre-tekst i stedet for senter */
+  row-gap: 1rem;
+}
+
+.hero-text {
+  max-width: 60ch;
+}
+
+  .hero-text h1 {
+      margin-bottom: .5rem;
+  }
+
+/* Skjul evt. hero-bildet i HTML n�r bakgrunn brukes */
+.hero-media {
+  display: none;
+}
+
+/* P� smale skjermer kan du sentrere igjen om du vil */
+@media (max-width: 700px) {
+  .hero-inner {
+      justify-items: center;
+      text-align: center;
+  }
+}
 
 
 /* ----------------- */
