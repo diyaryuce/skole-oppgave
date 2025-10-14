@@ -1,257 +1,144 @@
 /* ------------------------------
    Reset & grunnoppsett
 ---------------------------------*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-html {
-    font-size: 16px;
-    scroll-behavior: smooth;
-}
+html { font-size: 16px; scroll-behavior: smooth; }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #222;
-    background-color: #f9f9f9;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f9f9f9;
 }
 
-.card {
-    background: #2c3e50;
-    color: darkblue;
-}
+/* Kortkomponent eksempel */
+.card { background: #2c3e50; color: darkblue; }
 
-
-
-/* Tilgjengelighetssnarvei */
+/* ------------------------------
+   Tilgjengelighetssnarvei
+---------------------------------*/
 .skip-link {
-    position: absolute;
-    left: -999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+  position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus {
+  position: static; width: auto; height: auto; padding: 0.5rem;
+  background: #222; color: #fff; z-index: 1000;
 }
 
-    .skip-link:focus {
-        position: static;
-        width: auto;
-        height: auto;
-        padding: 0.5rem;
-        background: #222;
-        color: #fff;
-        z-index: 1000;
-    }
-/*LOGO STYLING*/
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    text-decoration: none;
-}
-
-.logo-img {
-    height: 66px; /* styr h�yden, bredden f�lger automatisk */
-    width: auto;
-    display: block;
-    object-fit: contain;
-}
-
+/* ------------------------------
+   LOGO
+---------------------------------*/
+.logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; }
+.logo-img { height: 66px; width: auto; display: block; object-fit: contain; }
 .download-logo a {
-    display: inline-block;
-    margin-top: .5rem;
-    padding: .4rem .8rem;
-    border-radius: 6px;
-    background: #0066cc;
-    color: #fff;
-    text-decoration: none;
+  display: inline-block; margin-top: .5rem; padding: .4rem .8rem;
+  border-radius: 6px; background: #0066cc; color: #fff; text-decoration: none;
 }
-
-    .download-logo a:hover {
-        background: #004c99;
-    }
-
-
-
-
-
-
-
+.download-logo a:hover { background: #004c99; }
 
 /* ------------------------------
-   FOOTER
+   Profil / tabeller
 ---------------------------------*/
-.site-footer {
-    background: #222;
-    color: #eee;
-    padding: 1rem 0;
+.profile-table {
+  width: 100%; border-collapse: separate; border-spacing: 0; margin-bottom: 2rem;
+  background: #f9f9fc; box-shadow: 0 2px 8px #ececec; border-radius: 8px; overflow: hidden;
+}
+.profile-table td { vertical-align: top; padding: 2rem 2rem 2rem 1rem; font-size: 1.08rem; }
+
+.profile-figure { display: flex; flex-direction: column; align-items: center; margin: 0; }
+
+.profile-photo {
+  width: 220px; max-width: 100%; border-radius: 8px; /* kvadratisk i nyere stil */
+  border: 4px solid #e4eefc; box-shadow: 0 4px 10px #ccc9; margin-bottom: .7rem; background: #fff;
 }
 
+.profile-figure figcaption {
+  text-align: center; font-weight: bold; color: #405385; font-size: 1.17rem; letter-spacing: .01em;
+}
+
+/* Om meg */
+.about {
+  margin-bottom: 1.1rem; padding: 1.2rem 1.1rem 1rem 1.1rem;
+  background: #fafdff; border-radius: 7px; box-shadow: 0 1px 4px #d0e2fa4a;
+}
+.about h2 {
+  margin: 0 0 .6rem 0; font-size: 1.25rem; color: #1c3552; letter-spacing: .01em;
+}
+.about p { margin: 0 0 .45rem 0; line-height: 1.7; color: #314560; font-size: 1.1rem; }
+
+/* Fakta/info-tabell */
+.info-table {
+  width: 100%; background: #fbfcff; border-collapse: separate; border-spacing: 0;
+  box-shadow: 0 1px 3px #c6dbf066; margin: .7rem 0 2.5rem; border-radius: 7px; overflow: hidden;
+}
+.info-table th, .info-table td { padding: .75rem .9rem; text-align: left; font-size: 1rem; }
+.info-table th {
+  background: #eaf2fc; color: #223355; font-weight: 600; border-bottom: 2px solid #cae0f8;
+  font-size: 1.04rem;
+}
+.info-table tbody tr:nth-child(odd) { background: #f4f7fb; }
+.info-table tbody tr:nth-child(even) { background: #fff; }
+.info-table tbody tr { transition: background .16s; }
+.info-table tbody tr:hover { background: #eaf4ff; }
+.info-table a { color: #0451a5; text-decoration: underline dotted #51a7f5; word-break: break-all; }
+.info-table a:hover { text-decoration: underline solid #0451a5; }
+
+/* ------------------------------
+   Hovedinnhold wrapper
+---------------------------------*/
+main.container {
+  background: #f6faff; border-radius: 10px; box-shadow: 0 2px 9px #cfd8ee66;
+  padding: 2.3rem 1.2rem 2.2rem; margin-bottom: 2.3rem;
+}
+
+/* ------------------------------
+   Footer
+---------------------------------*/
+.site-footer { background: #222; color: #eee; padding: 1rem 0; }
 .footer-inner {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
 }
-
-    .footer-inner ul {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
-    }
-
-    .footer-inner a {
-        color: #eee;
-        text-decoration: none;
-    }
-
-        .footer-inner a:hover {
-            text-decoration: underline;
-        }
+.footer-inner ul { list-style: none; display: flex; gap: 1rem; }
+.footer-inner a { color: #eee; text-decoration: none; }
+.footer-inner a:hover { text-decoration: underline; }
 
 /* ------------------------------
-   RESPONSIVT DESIGN
+   Knappestiler
 ---------------------------------*/
-@media (max-width: 900px) {
-    .hero-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+.btn {
+  padding: .6rem 1.2rem; text-decoration: none; font-size: .95rem; border-radius: 6px;
+  background: #0066cc; color: #fff; transition: background .2s ease; display: inline-block;
+}
+.btn:hover { background: #004c99; }
 
-    .grid-row {
-        grid-template-columns: 1fr 1fr;
-    }
+.back-btn { background: #333; color: #fff; margin: 1rem 0; }
+.back-btn:hover { background: #111; }
+
+/* ------------------------------
+   Responsivt
+---------------------------------*/
+@media (max-width: 700px) {
+  .profile-table td { display: block; width: 100%; }
+  .photo-cell { margin-bottom: 1rem; }
+}
+
+@media (max-width: 650px) {
+  .profile-table, .info-table { font-size: .97rem; }
+  .profile-table td, .info-table th, .info-table td { padding: 1rem .6rem; }
+  .profile-photo { width: 140px; }
 }
 
 @media (max-width: 600px) {
-    .main-nav {
-        display: none; /* du kan endre til burger hvis �nsket */
-    }
-
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: 1px solid #0066cc;
-        padding: 0.5rem;
-        border-radius: 4px;
-        color: #0066cc;
-    }
-
-    .grid-row {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-text h1 {
-        font-size: 1.5rem;
-    }
+  /* skjul desktop-nav hvis du har en .main-nav */
+  .main-nav { display: none; }
+  .menu-toggle {
+    display: block; background: none; border: 1px solid #0066cc;
+    padding: .5rem; border-radius: 4px; color: #0066cc;
+  }
 }
 
-/* --- Personlig side: tabeller --- */
-.profile-table,
-.info-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,.05);
-    margin-top: 1rem;
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .grid-row { grid-template-columns: 1fr 1fr; }
 }
-
-    .profile-table td {
-        padding: 1rem 1.25rem;
-        vertical-align: top;
-    }
-
-.profile-figure {
-    margin: 0;
-    text-align: center;
-}
-
-.profile-photo {
-    width: 100%;
-    max-width: 240px;
-    aspect-ratio: 4/5;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto .5rem;
-    box-shadow: 0 6px 16px rgba(0,0,0,.08);
-}
-
-.info-table thead th {
-    text-align: left;
-    padding: .85rem 1.1rem;
-    background: #eef3f8; /* lys bl�-gr� bakgrunn for header */
-    color: #1f2b3a;
-    font-weight: 700;
-    border-bottom: 1px solid #e3e9f1;
-}
-
-.info-table tbody td {
-    padding: .85rem 1.1rem;
-    border-bottom: 1px solid #f0f2f5;
-}
-
-.info-table tbody tr:hover {
-    background: #fafbfc;
-}
-
-@media (max-width: 700px) {
-    .profile-table td {
-        display: block;
-        width: 100%;
-    }
-
-    .photo-cell {
-        margin-bottom: 1rem;
-    }
-}
-
-/* --- Tilbake-knapp p� minside --- */
-.btn {
-    padding: 0.6rem 1.2rem;
-    text-decoration: none;
-    font-size: 0.95rem;
-    border-radius: 6px;
-    background: #0066cc;
-    color: #fff;
-    transition: background 0.2s ease;
-    display: inline-block;
-}
-
-    .btn:hover {
-        background: #004c99;
-    }
-
-/* --- Egen stil for tilbake-knappen p� minside --- */
-.back-btn {
-    background: #333; /* m�rk gr� bakgrunn */
-    color: #fff;
-    margin-bottom: 1rem; /* luft over footeren */
-    margin-top:1rem;
-}
-
-    .back-btn:hover {
-        background: #111; /* litt m�rkere ved hover */
-    }
-
-
-/* --- Om meg-seksjon --- */
-.about p {
-    font-size: 1.1rem; /* �ker teksten litt (standard er ca 1rem) */
-    line-height: 1.7; /* Litt mer luft mellom linjene */
-    color: #222; /* M�rk, lettleselig tekst */
-}
-
-.about h2 {
-    font-size: 1.6rem; /* Gj�r overskriften litt st�rre ogs� */
-    margin-bottom: 1rem;
-}
-
-
-
