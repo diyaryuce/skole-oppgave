@@ -12,11 +12,14 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Kortkomponent eksempel */
-.card { background: #2c3e50; color: darkblue; }
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
 /* ------------------------------
-   Tilgjengelighetssnarvei
+   Skip link
 ---------------------------------*/
 .skip-link {
   position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden;
@@ -27,118 +30,169 @@ body {
 }
 
 /* ------------------------------
-   LOGO
+   Header og navigasjon
 ---------------------------------*/
-.logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; }
-.logo-img { height: 66px; width: auto; display: block; object-fit: contain; }
-.download-logo a {
-  display: inline-block; margin-top: .5rem; padding: .4rem .8rem;
-  border-radius: 6px; background: #0066cc; color: #fff; text-decoration: none;
+.site-header {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
-.download-logo a:hover { background: #004c99; }
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar a {
+  text-decoration: none;
+  color: #1c3552;
+  font-weight: 500;
+  transition: color .2s ease;
+}
+.navbar a:hover { color: #0077cc; }
+
+/* Mobilknapp */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #0077cc;
+  background: transparent;
+  padding: .4rem .6rem;
+  border-radius: 5px;
+}
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #0077cc;
+}
 
 /* ------------------------------
    Profil / tabeller
 ---------------------------------*/
 .profile-table {
-  width: 100%; border-collapse: separate; border-spacing: 0; margin-bottom: 2rem;
-  background: #f9f9fc; box-shadow: 0 2px 8px #ececec; border-radius: 8px; overflow: hidden;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 2rem;
+  background: #f9f9fc;
+  box-shadow: 0 2px 8px #ececec;
+  border-radius: 8px;
 }
-.profile-table td { vertical-align: top; padding: 2rem 2rem 2rem 1rem; font-size: 1.08rem; }
+.profile-table td {
+  vertical-align: top;
+  padding: 2rem;
+}
 
-.profile-figure { display: flex; flex-direction: column; align-items: center; margin: 0; }
-
+.profile-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .profile-photo {
-  width: 220px; max-width: 100%; border-radius: 8px; /* kvadratisk i nyere stil */
-  border: 4px solid #e4eefc; box-shadow: 0 4px 10px #ccc9; margin-bottom: .7rem; background: #fff;
+  width: 220px;
+  border-radius: 8px;
+  border: 4px solid #e4eefc;
+  box-shadow: 0 4px 10px #ccc9;
+  margin-bottom: .7rem;
 }
-
 .profile-figure figcaption {
-  text-align: center; font-weight: bold; color: #405385; font-size: 1.17rem; letter-spacing: .01em;
+  text-align: center;
+  font-weight: bold;
+  color: #405385;
+  font-size: 1.17rem;
 }
 
 /* Om meg */
 .about {
-  margin-bottom: 1.1rem; padding: 1.2rem 1.1rem 1rem 1.1rem;
-  background: #fafdff; border-radius: 7px; box-shadow: 0 1px 4px #d0e2fa4a;
+  margin-bottom: 1.1rem;
+  padding: 1.2rem;
+  background: #fafdff;
+  border-radius: 7px;
+  box-shadow: 0 1px 4px #d0e2fa4a;
 }
-.about h2 {
-  margin: 0 0 .6rem 0; font-size: 1.25rem; color: #1c3552; letter-spacing: .01em;
-}
-.about p { margin: 0 0 .45rem 0; line-height: 1.7; color: #314560; font-size: 1.1rem; }
+.about h2 { color: #1c3552; margin-bottom: .6rem; }
+.about p { margin-bottom: .45rem; line-height: 1.7; color: #314560; }
 
-/* Fakta/info-tabell */
+/* Fakta-tabell */
 .info-table {
-  width: 100%; background: #fbfcff; border-collapse: separate; border-spacing: 0;
-  box-shadow: 0 1px 3px #c6dbf066; margin: .7rem 0 2.5rem; border-radius: 7px; overflow: hidden;
+  width: 100%;
+  background: #fbfcff;
+  border-collapse: separate;
+  border-spacing: 0;
+  box-shadow: 0 1px 3px #c6dbf066;
+  margin: .7rem 0 2.5rem;
+  border-radius: 7px;
 }
-.info-table th, .info-table td { padding: .75rem .9rem; text-align: left; font-size: 1rem; }
+.info-table th, .info-table td { padding: .75rem .9rem; text-align: left; }
 .info-table th {
-  background: #eaf2fc; color: #223355; font-weight: 600; border-bottom: 2px solid #cae0f8;
-  font-size: 1.04rem;
+  background: #eaf2fc;
+  color: #223355;
+  font-weight: 600;
 }
 .info-table tbody tr:nth-child(odd) { background: #f4f7fb; }
 .info-table tbody tr:nth-child(even) { background: #fff; }
-.info-table tbody tr { transition: background .16s; }
 .info-table tbody tr:hover { background: #eaf4ff; }
-.info-table a { color: #0451a5; text-decoration: underline dotted #51a7f5; word-break: break-all; }
-.info-table a:hover { text-decoration: underline solid #0451a5; }
-
-/* ------------------------------
-   Hovedinnhold wrapper
----------------------------------*/
-main.container {
-  background: #f6faff; border-radius: 10px; box-shadow: 0 2px 9px #cfd8ee66;
-  padding: 2.3rem 1.2rem 2.2rem; margin-bottom: 2.3rem;
+.info-table a {
+  color: #0451a5;
+  text-decoration: underline dotted #51a7f5;
 }
+.info-table a:hover { text-decoration: underline solid #0451a5; }
 
 /* ------------------------------
    Footer
 ---------------------------------*/
-.site-footer { background: #222; color: #eee; padding: 1rem 0; }
-.footer-inner {
-  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+.site-footer {
+  background: #222;
+  color: #eee;
+  padding: 2rem 0;
+  margin-top: 2rem;
 }
-.footer-inner ul { list-style: none; display: flex; gap: 1rem; }
-.footer-inner a { color: #eee; text-decoration: none; }
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footer-inner h3 { color: #fff; margin-bottom: .5rem; }
+.footer-inner a { color: #ddd; text-decoration: none; }
 .footer-inner a:hover { text-decoration: underline; }
 
-/* ------------------------------
-   Knappestiler
----------------------------------*/
-.btn {
-  padding: .6rem 1.2rem; text-decoration: none; font-size: .95rem; border-radius: 6px;
-  background: #0066cc; color: #fff; transition: background .2s ease; display: inline-block;
+.footer-bottom {
+  border-top: 1px solid #444;
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
 }
-.btn:hover { background: #004c99; }
-
-.back-btn { background: #333; color: #fff; margin: 1rem 0; }
-.back-btn:hover { background: #111; }
 
 /* ------------------------------
-   Responsivt
+   Responsivt design
 ---------------------------------*/
+@media (max-width: 800px) {
+  .navbar { display: none; flex-direction: column; gap: 1rem; }
+  .navbar.open { display: flex; }
+  .menu-toggle { display: flex; }
+}
+
 @media (max-width: 700px) {
   .profile-table td { display: block; width: 100%; }
   .photo-cell { margin-bottom: 1rem; }
-}
-
-@media (max-width: 650px) {
-  .profile-table, .info-table { font-size: .97rem; }
-  .profile-table td, .info-table th, .info-table td { padding: 1rem .6rem; }
-  .profile-photo { width: 140px; }
-}
-
-@media (max-width: 600px) {
-  /* skjul desktop-nav hvis du har en .main-nav */
-  .main-nav { display: none; }
-  .menu-toggle {
-    display: block; background: none; border: 1px solid #0066cc;
-    padding: .5rem; border-radius: 4px; color: #0066cc;
-  }
-}
-
-@media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; text-align: center; }
-  .grid-row { grid-template-columns: 1fr 1fr; }
+  .profile-photo { width: 160px; }
 }

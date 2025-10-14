@@ -4,35 +4,37 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Min side – Regnbyen Bergen AS</title>
-    <!-- Hvis CSS-en din ligger i /css/styles.css, bytt href til css/styles.css -->
     <link rel="stylesheet" href="khader.css">
 </head>
 <body>
-    <!-- Toppmeny (match wireframe med logo + lenker) -->
-    <header class="site-header">
+    <!-- Skip link for accessibility -->
+    <a href="#innhold" class="skip-link">Hopp til innhold</a>
+
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
         <div class="container header-inner">
             <a href="index.html" aria-label="Gå til hjemmesiden">
                 <img src="public/logo/logo.png"
                      alt="Regnbyen Bergen AS Logo"
-                     class="logo"
+                     class="logo-img"
                      loading="eager" />
             </a>
 
-            <!-- Mobile menu toggle button -->
+            <!-- Mobile menu toggle -->
             <button class="menu-toggle" aria-label="Åpne meny" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <nav aria-label="Hovedmeny">
+            <nav class="main-nav" aria-label="Hovedmeny">
                 <ul class="navbar">
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="om-oss.html">Om prosjektet</a></li>
                     <li><a href="klaer.html">Klær &amp; sko</a></li>
                     <li><a href="hus.html">Hus</a></li>
                     <li><a href="bil.html">Bil</a></li>
-                    <li><a href="sosialearagementer.html">Sosialegrupper</a></li>
+                    <li><a href="sosialearangementer.html">Sosialegrupper</a></li>
                     <li><a href="aktiviteter.html">Aktiviteter</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
@@ -40,22 +42,21 @@
         </div>
     </header>
 
-    <main id="innhold" class="container" style="margin-top:2rem;">
+    <!-- MAIN -->
+    <main id="innhold" class="container" role="main" style="margin-top:2rem;">
         <h1>Hei, jeg er Khader</h1>
         <p>Her er en liten presentasjon av meg.</p>
 
-        <!-- Tabell 1: Bilde + kort bio -->
+        <!-- Profil -->
         <table class="profile-table" role="table" aria-label="Profil">
             <tr>
                 <td class="photo-cell" style="width:260px;">
                     <figure class="profile-figure">
-                        <!-- Legg bildet ditt som images/meg.jpg -->
-                        <img src="public/img/khader.jpg" alt="Bilde av Khader" class="profile-photo">
+                        <img src="public/img/khader.jpg" alt="Bilde av Khader" class="profile-photo" loading="lazy">
                         <figcaption>Khader Daraghma</figcaption>
                     </figure>
                 </td>
                 <td>
-
                     <section class="about">
                         <h2>Om meg</h2>
                         <p>
@@ -67,12 +68,11 @@
                             Jeg tror på at man alltid kan lære noe nytt – og det er det som motiverer meg hver dag.
                         </p>
                     </section>
-
                 </td>
             </tr>
         </table>
 
-        <!-- Tabell 2: Fakta/egenskaper -->
+        <!-- Fakta -->
         <h2 style="margin-top:2rem;">Fakta</h2>
         <table class="info-table" role="table" aria-label="Informasjon">
             <thead>
@@ -83,7 +83,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td> Født</td>
+                    <td>Født</td>
                     <td>20/10/2004</td>
                 </tr>
                 <tr>
@@ -92,7 +92,7 @@
                 </tr>
                 <tr>
                     <td>Ferdigheter</td>
-                    <td>Grunnlegende: HTML/CSS, Java, Python, Sql</td>
+                    <td>Grunnleggende: HTML/CSS, Java, Python, SQL</td>
                 </tr>
                 <tr>
                     <td>Språk</td>
@@ -104,64 +104,60 @@
                 </tr>
             </tbody>
         </table>
-
-    
-
     </main>
 
-    <footer role="contentinfo">
-      <div class="container">
-          <div class="footer-inner">
-              <!-- About Section -->
-              <div class="footer-copyright">
-                  <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
-                  <p style="font-size: 0.9rem; color: #b0b0b0; line-height: 1.7;">
-                      Din guide til å leve godt i Bergen – tips om klær, bolig, bil og aktiviteter for alle årstider.
-                  </p>
-              </div>
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-about">
+                    <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
+                    <p style="font-size: 0.9rem; color: #b0b0b0; line-height: 1.7;">
+                        Din guide til å leve godt i Bergen – tips om klær, bolig, bil og aktiviteter for alle årstider.
+                    </p>
+                </div>
 
-              <!-- Navigation Links -->
-              <div class="footer-nav-section">
-                  <h3>Snarveier</h3>
-                  <nav aria-label="Bunnmeny">
-                      <ul class="footer-menu">
-                          <li><a href="om-oss.html">Om oss</a></li>
-                          <li><a href="klaer.html">Klær & sko</a></li>
-                          <li><a href="hus.html">Hus</a></li>
-                          <li><a href="bil.html">Bil</a></li>
-                          <li><a href="aktiviteter.html">Aktiviteter</a></li>
-                          <li><a href="kontakt.html">Kontakt</a></li>
-                      </ul>
-                  </nav>
-              </div>
+                <div class="footer-nav-section">
+                    <h3>Snarveier</h3>
+                    <ul class="footer-menu">
+                        <li><a href="om-oss.html">Om oss</a></li>
+                        <li><a href="klaer.html">Klær & sko</a></li>
+                        <li><a href="hus.html">Hus</a></li>
+                        <li><a href="bil.html">Bil</a></li>
+                        <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
 
-              <!-- Newsletter Subscription -->
-              <div class="footer-newsletter">
-                  <h3>Motta våre tips</h3>
-                  <p>Få de beste rådene for regnfulle dager direkte i innboksen din.</p>
-                  <form class="newsletter-form" action="#" method="post" aria-label="Nyhetsbrev påmelding">
-                      <input 
-                          type="email" 
-                          class="newsletter-input" 
-                          placeholder="Din e-postadresse" 
-                          required 
-                          aria-label="E-postadresse"
-                      />
-                      <button type="submit" class="newsletter-btn">Abonner</button>
-                  </form>
-              </div>
-          </div>
+                <div class="footer-newsletter">
+                    <h3>Motta våre tips</h3>
+                    <p>Få de beste rådene for regnfulle dager direkte i innboksen din.</p>
+                    <form class="newsletter-form" action="#" method="post" aria-label="Nyhetsbrev påmelding">
+                        <input type="email" class="newsletter-input" placeholder="Din e-postadresse" required aria-label="E-postadresse" />
+                        <button type="submit" class="newsletter-btn">Abonner</button>
+                    </form>
+                </div>
+            </div>
 
-          <!-- Footer Bottom -->
-          <div class="footer-bottom">
-              <p>&copy; <span id="year-bottom">2025</span> Regnbyen Bergen A/S. Alle rettigheter reservert. 
-                  <a href="tilgjengelighet.html" style="margin-left: 1rem;">Tilgjengelighet</a> | 
-                  <a href="personvern.html">Personvern</a>
-              </p>
-          </div>
-      </div>
-  </footer>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Regnbyen Bergen A/S. Alle rettigheter reservert. 
+                    <a href="tilgjengelighet.html" style="margin-left: 1rem;">Tilgjengelighet</a> | 
+                    <a href="personvern.html">Personvern</a>
+                </p>
+            </div>
+        </div>
+    </footer>
 
-  <script src="main.js"></script>
+    <!-- Enkel meny-funksjon -->
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.main-nav');
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            const expanded = nav.classList.contains('open');
+            toggle.setAttribute('aria-expanded', expanded);
+        });
+    </script>
 </body>
 </html>
