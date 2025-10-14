@@ -1,0 +1,481 @@
+/* ------------------------------
+   Reset & grunnoppsett
+---------------------------------*/
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+/* Kortkomponent eksempel */
+.card { background: #2c3e50; color: darkblue; }
+
+/* ------------------------------
+   Tilgjengelighetssnarvei
+---------------------------------*/
+.skip-link {
+  position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus {
+  position: static; width: auto; height: auto; padding: 0.5rem;
+  background: #222; color: #fff; z-index: 1000;
+}
+
+/* ------------------------------
+   Logo & Header/Navbar styles
+---------------------------------*/
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    background: #fff; 
+    border-bottom: 2px solid #e8e8e8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.site-header:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.header-inner a {
+    order: 1;
+}
+
+.header-inner nav {
+    order: 2;
+}
+
+.menu-toggle {
+    order: 3;
+    margin-left: auto;
+}
+
+.logo {
+    height: 60px; 
+    width: auto;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar li a {
+    display: block;
+    padding: 0.7rem 1.2rem;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 2px;
+    background: #0066cc;
+    transition: transform 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: #0066cc;
+    background: #f0f7ff;
+}
+
+.navbar li a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.navbar li a.active {
+    color: #fff;
+    background: #0066cc;
+    font-weight: 600;
+}
+
+.navbar li a.active::after {
+    display: none;
+}
+
+
+.navbar li a:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+.navbar li a:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.navbar li a:focus-visible {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.menu-toggle:hover span {
+    background: #0066cc;
+}
+
+/* Animated hamburger to X */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* ------------------------------
+   End of Logo & Header styles
+---------------------------------*/
+
+/* ------------------------------
+   Profil / tabeller
+---------------------------------*/
+.profile-table {
+  width: 100%; border-collapse: separate; border-spacing: 0; margin-bottom: 2rem;
+  background: #f9f9fc; box-shadow: 0 2px 8px #ececec; border-radius: 8px; overflow: hidden;
+}
+.profile-table td { vertical-align: top; padding: 2rem 2rem 2rem 1rem; font-size: 1.08rem; }
+
+.profile-figure { display: flex; flex-direction: column; align-items: center; margin: 0; }
+
+.profile-photo {
+  width: 220px; max-width: 100%; border-radius: 8px; /* kvadratisk i nyere stil */
+  border: 4px solid #e4eefc; box-shadow: 0 4px 10px #ccc9; margin-bottom: .7rem; background: #fff;
+}
+
+.profile-figure figcaption {
+  text-align: center; font-weight: bold; color: #405385; font-size: 1.17rem; letter-spacing: .01em;
+}
+
+/* Om meg */
+.about {
+  margin-bottom: 1.1rem; padding: 1.2rem 1.1rem 1rem 1.1rem;
+  background: #fafdff; border-radius: 7px; box-shadow: 0 1px 4px #d0e2fa4a;
+}
+.about h2 {
+  margin: 0 0 .6rem 0; font-size: 1.25rem; color: #1c3552; letter-spacing: .01em;
+}
+.about p { margin: 0 0 .45rem 0; line-height: 1.7; color: #314560; font-size: 1.1rem; }
+
+/* Fakta/info-tabell */
+.info-table {
+  width: 100%; background: #fbfcff; border-collapse: separate; border-spacing: 0;
+  box-shadow: 0 1px 3px #c6dbf066; margin: .7rem 0 2.5rem; border-radius: 7px; overflow: hidden;
+}
+.info-table th, .info-table td { padding: .75rem .9rem; text-align: left; font-size: 1rem; }
+.info-table th {
+  background: #eaf2fc; color: #223355; font-weight: 600; border-bottom: 2px solid #cae0f8;
+  font-size: 1.04rem;
+}
+.info-table tbody tr:nth-child(odd) { background: #f4f7fb; }
+.info-table tbody tr:nth-child(even) { background: #fff; }
+.info-table tbody tr { transition: background .16s; }
+.info-table tbody tr:hover { background: #eaf4ff; }
+.info-table a { color: #0451a5; text-decoration: underline dotted #51a7f5; word-break: break-all; }
+.info-table a:hover { text-decoration: underline solid #0451a5; }
+
+/* ------------------------------
+   Hovedinnhold wrapper
+---------------------------------*/
+main.container {
+  background: #f6faff; border-radius: 10px; box-shadow: 0 2px 9px #cfd8ee66;
+  padding: 2.3rem 1.2rem 2.2rem; margin-bottom: 2.3rem;
+}
+
+/* ------------------------------
+   Footer styles
+---------------------------------*/
+
+footer {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 4rem 0 1.5rem;
+    margin-top: 6rem;
+    border-top: 3px solid #0066cc;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+}
+
+footer p {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.6;
+}
+
+footer p span {
+    color: #fff;
+    font-weight: 600;
+}
+
+footer a {
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #0066cc;
+}
+
+/* Footer Copyright Section */
+.footer-copyright {
+    max-width: 100%;
+}
+
+.footer-copyright p:first-child {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.footer-copyright p:last-child {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    line-height: 1.7;
+}
+
+/* Footer Navigation Section */
+.footer-nav-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav-section h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0 0 1.5rem 0;
+    font-weight: 600;
+    text-align: left;
+}
+
+.footer-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-menu li a {
+    padding: 0.4rem 0;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+
+
+.footer-menu li a:hover {
+    color: #fff;
+    padding-left: 1.5rem;
+}
+
+.footer-menu li a:hover::before {
+    opacity: 1;
+}
+
+.footer-menu li a:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Newsletter Section */
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-newsletter h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+    text-align: left;
+}
+
+.footer-newsletter p {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.newsletter-input {
+    padding: 0.85rem 1.1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: #0066cc;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.newsletter-btn {
+    padding: 0.85rem 1.5rem;
+    background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.newsletter-btn:hover {
+    background: linear-gradient(135deg, #0052a3 0%, #004080 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+}
+
+.newsletter-btn:active {
+    transform: translateY(0);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 1rem 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+}
+
+.copyright {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 0.9em;
+}
+
+/* ------------------------------
+   End of Footer styles
+---------------------------------*/
+
+/* ------------------------------
+   Knappestiler
+---------------------------------*/
+.btn {
+  padding: .6rem 1.2rem; text-decoration: none; font-size: .95rem; border-radius: 6px;
+  background: #0066cc; color: #fff; transition: background .2s ease; display: inline-block;
+}
+.btn:hover { background: #004c99; }
+
+.back-btn { background: #333; color: #fff; margin: 1rem 0; }
+.back-btn:hover { background: #111; }
+
+/* ------------------------------
+   Responsivt
+---------------------------------*/
+@media (max-width: 700px) {
+  .profile-table td { display: block; width: 100%; }
+  .photo-cell { margin-bottom: 1rem; }
+}
+
+@media (max-width: 650px) {
+  .profile-table, .info-table { font-size: .97rem; }
+  .profile-table td, .info-table th, .info-table td { padding: 1rem .6rem; }
+  .profile-photo { width: 140px; }
+}
+
+@media (max-width: 600px) {
+  /* skjul desktop-nav hvis du har en .main-nav */
+  .main-nav { display: none; }
+  .menu-toggle {
+    display: block; background: none; border: 1px solid #0066cc;
+    padding: .5rem; border-radius: 4px; color: #0066cc;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .grid-row { grid-template-columns: 1fr 1fr; }
+}
