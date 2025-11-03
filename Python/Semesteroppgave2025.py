@@ -17,6 +17,15 @@ from typing import Iterable
 # Fargepalett for nedbørskategorier (lav -> høy)
 COLOR_PALETTE = ['orange', 'gray', 'blue', 'darkblue', 'black']
 
+# Bakgrunnsbilde for kartet - legg bildet i Python-mappen og oppdater filnavnet her
+# Støtter: PNG, JPG, JPEG (prøver både små og store bokstaver)
+BACKGROUND_IMAGE_NAME = 'StorBergen2.png'  # Endre til ditt bildefilnavn her
+
+# Bakgrunnsfarger for skjemaet
+FIGURE_BG_COLOR = '#25433c'      # Mørkegrønn bakgrunnsfarge for hele vinduet
+GRAPH_BG_COLOR = '#25433c'       # Mørkegrønn bakgrunnsfarge for nedbørsgrafen (venstre side)
+MAP_BG_COLOR = '#f6f8fb'         # Bakgrunnsfarge for kartet (hvis ingen bilde) - lys grå
+
 display_mode = 'Måned'  # or 'Kvartal'
 last_pred_monthly = None  # stores last 12-length prediction vector
 
@@ -68,8 +77,9 @@ def on_click(event: MouseEvent) -> None:
     y_pred = model.predict(AtPointM)
     aarsnedbor = sum(y_pred)
     axGraph.cla()
+    axGraph.set_facecolor(GRAPH_BG_COLOR)  # Sett bakgrunnsfarge på nytt
     draw_the_map()
-    axMap.set_title(f"C: ({x:.1f},{y:.1f}) - click rød er estimert")
+    axMap.set_title(f"C: ({x:.1f},{y:.1f}) - click rød er estimert", color='white', fontsize=12, fontweight='bold')
 
 
     axMap.text(x, y, s=label_from_nedbor(aarsnedbor), color='white', fontsize=10, ha='center', va='center')
@@ -77,7 +87,7 @@ def on_click(event: MouseEvent) -> None:
     last_pred_monthly = y_pred
 
     title_prefix = 'Nedbør per måned' if display_mode == 'Måned' else 'Nedbør per kvartal'
-    axGraph.set_title(f"{title_prefix}, Årsnedbør {int(aarsnedbor)} mm")
+    axGraph.set_title(f"{title_prefix}, Årsnedbør {int(aarsnedbor)} mm", color='white', fontsize=12, fontweight='bold')
 
     if display_mode == 'Måned':
         colorsPred = [color_from_nedbor(v * 12) for v in y_pred]
@@ -97,13 +107,22 @@ def draw_label_and_ticks() -> None:
     if display_mode == 'Måned':
         xlabels = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D']
         axGraph.set_xticks(np.linspace(1, 12, 12))
-        axGraph.set_xticklabels(xlabels)
+        axGraph.set_xticklabels(xlabels, color='white')
         axGraph.set_xlim(0.5, 12.5)
     else:
         xlabels = ['Q1', 'Q2', 'Q3', 'Q4']
         axGraph.set_xticks(np.linspace(1, 4, 4))
-        axGraph.set_xticklabels(xlabels)
+        axGraph.set_xticklabels(xlabels, color='white')
         axGraph.set_xlim(0.5, 4.5)
+    
+    # Sett farger på akser og labels for synlighet på mørk bakgrunn
+    axGraph.tick_params(colors='white', labelsize=9)
+    axGraph.spines['bottom'].set_color('white')
+    axGraph.spines['left'].set_color('white')
+    axGraph.spines['top'].set_color('white')
+    axGraph.spines['right'].set_color('white')
+    axGraph.yaxis.label.set_color('white')
+    axGraph.xaxis.label.set_color('white')
 
 
 def aggregate_to_quarters(monthly_values: Iterable[float]) -> np.ndarray:
@@ -117,28 +136,42 @@ def aggregate_to_quarters(monthly_values: Iterable[float]) -> np.ndarray:
     ])
 
 # Create the figures
-fig = plt.figure(figsize=(10, 4))
+fig = plt.figure(figsize=(10, 4), facecolor=FIGURE_BG_COLOR)
 axGraph = fig.add_axes((0.05, 0.07, 0.35, 0.85))
+axGraph.set_facecolor(GRAPH_BG_COLOR)
 axMap = fig.add_axes((0.41, 0.07, 0.54, 0.85))
 axMode = fig.add_axes((0.96, 0.50, 0.03, 0.25))
+axMode.set_facecolor(FIGURE_BG_COLOR)  # Sett bakgrunnsfarge på radiobutton-området
+axMode.set_xticks([])  # Fjern x-akse
+axMode.set_yticks([])  # Fjern y-akse
+for spine in axMode.spines.values():
+    spine.set_visible(False)  # Fjern kanter
 draw_label_and_ticks()
-# Last bakgrunnsbilde ved behov (PNG/PNG variant); fall tilbake til lys bakgrunn
+# Last bakgrunnsbilde - prøver flere varianter av filnavn (små/store bokstaver, ulike filformater)
 img = None
-for candidate in ['StorBergen2.png', 'StorBergen2.PNG']:
+base_name = Path(BACKGROUND_IMAGE_NAME).stem  # Navn uten filendelse
+extensions = ['.png', '.PNG', '.jpg', '.JPG', '.jpeg', '.JPEG']
+for ext in extensions:
+    candidate = base_name + ext
     img_path = Path(__file__).with_name(candidate)
     if img_path.exists():
-        img = mpimg.imread(img_path)
-        break
+        try:
+            img = mpimg.imread(img_path)
+            print(f"Lastet bakgrunnsbilde: {candidate}")
+            break
+        except Exception as e:
+            print(f"Kunne ikke laste {candidate}: {e}")
+            continue
 
 if img is not None:
     axMap.imshow(img, extent=(0, 13, 0, 10))
 else:
-    # No image available; draw a light background grid instead
-    axMap.set_facecolor('#f6f8fb')
+    # No image available; draw background color instead
+    axMap.set_facecolor(MAP_BG_COLOR)
     axMap.set_xlim(0, 13)
     axMap.set_ylim(0, 10)
-axMap.set_title("Årsnedbør Stor Bergen")
-axGraph.set_title("Per måned")
+axMap.set_title("Årsnedbør Stor Bergen", color='white', fontsize=12, fontweight='bold')
+axGraph.set_title("Per måned", color='white', fontsize=12, fontweight='bold')
 axMap.axis('off')
 
 fig.subplots_adjust(left=0, right=1, top=1, bottom=0) # Adjust the figure to fit the image
@@ -170,18 +203,37 @@ draw_the_map()
 plt.connect('button_press_event', on_click)
 
 # Radio-knapper for å bytte mellom Måned og Kvartal
-radio = RadioButtons(axMode, ("Måned", "Kvartal"))
+radio = RadioButtons(axMode, ("Måned", "Kvartal"), activecolor='#66ff66')  # Lys grønn farge for aktiv knapp
 radio.set_active(0)
+
+# Styling av radiobuttons - sett bakgrunn og farger
+# RadioButtons bruker patches (sirkler) som kan aksesseres via patches
+for patch in axMode.patches:
+    patch.set_edgecolor('white')  # Hvit kant
+    patch.set_facecolor('#25433c')  # Mørkegrønn bakgrunn (samme som skjemaet)
+    patch.set_linewidth(2.5)
+
+# Styling av labels (tekst)
+for label in radio.labels:
+    label.set_color('white')  # Hvit tekst
+    label.set_fontsize(11)
+    label.set_fontweight('bold')
 
 def on_mode_change(label):
     global display_mode
     display_mode = label
     axGraph.cla()
+    axGraph.set_facecolor(GRAPH_BG_COLOR)  # Sett bakgrunnsfarge på nytt
     draw_label_and_ticks()
+    
+    # Visuell feedback: oppdater radiobutton styling
+    for patch in axMode.patches:
+        patch.set_edgecolor('white')
+        patch.set_linewidth(2.5)
     if last_pred_monthly is not None:
         title_prefix = 'Nedbør per måned' if display_mode == 'Måned' else 'Nedbør per kvartal'
         aarsnedbor = float(np.sum(last_pred_monthly))
-        axGraph.set_title(f"{title_prefix}, Årsnedbør {int(aarsnedbor)} mm")
+        axGraph.set_title(f"{title_prefix}, Årsnedbør {int(aarsnedbor)} mm", color='white', fontsize=12, fontweight='bold')
         if display_mode == 'Måned':
             colorsPred = [color_from_nedbor(v * 12) for v in last_pred_monthly]
             axGraph.bar(np.arange(1, 13), last_pred_monthly, color=colorsPred)
