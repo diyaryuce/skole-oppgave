@@ -62,6 +62,17 @@ figure {
     text-align: center;
 }
 
+/* Ensurer like bildeflater for skjermbilder på python-siden */
+.responsive-img {
+    display: block;
+    width: 100%;            /* skalerer innenfor container */
+    max-width: 900px;       /* lik maks-bredde for begge */
+    height: 420px;          /* fast høyde for lik størrelse */
+    object-fit: contain;    /* bevar proporsjoner uten å beskjære */
+    margin-left: auto;
+    margin-right: auto;
+}
+
 figcaption {
     font-size: 0.9em;
     margin-top: 0.3em;
