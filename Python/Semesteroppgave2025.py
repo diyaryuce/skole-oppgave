@@ -93,6 +93,15 @@ def on_click(event: MouseEvent) -> None:
     if display_mode == 'Måned':
         colorsPred = [color_from_nedbor(v * 12) for v in y_pred]
         axGraph.bar(months, y_pred, color=colorsPred)
+        mean_value = np.mean(y_pred)
+        print(f"Gjennomsnitt (mm per måned): {mean_value:.2f}")
+        axGraph.axhline(
+            y=mean_value,
+            color='red',
+            linestyle='--',
+            linewidth=2,
+            label=f"Gj.snitt {mean_value:.0f} mm/mnd")
+        axGraph.legend()
     else:
         quarters = aggregate_to_quarters(y_pred)
         colorsPred = [color_from_nedbor(v * 4) for v in quarters]
@@ -143,7 +152,7 @@ fig = plt.figure(figsize=(10, 4), facecolor=FIGURE_BG_COLOR)
 axGraph = fig.add_axes((0.07, 0.05, 0.3, 0.80))
 axGraph.set_facecolor(GRAPH_BG_COLOR)
 axMap = fig.add_axes((0.39, 0.05, 0.54, 0.85))
-axMode = fig.add_axes((0.93, 0.50, 0.03, 0.25))
+axMode = fig.add_axes((0.935, 0.50, 0.03, 0.25))
 axMode.set_facecolor(FIGURE_BG_COLOR)  # Sett bakgrunnsfarge på radiobutton-området
 axMode.set_xticks([])  # Fjern x-akse
 axMode.set_yticks([])  # Fjern y-akse
@@ -257,6 +266,15 @@ def on_mode_change(label):
         if display_mode == 'Måned':
             colorsPred = [color_from_nedbor(v * 12) for v in last_pred_monthly]
             axGraph.bar(np.arange(1, 13), last_pred_monthly, color=colorsPred)
+            mean_value = np.mean(last_pred_monthly)
+            print(f"Gjennomsnitt (mm per måned): {mean_value:.2f}")
+            axGraph.axhline(
+                y=mean_value,
+                color='red',
+                linestyle='--',
+                linewidth=2,
+                label=f"Gj.snitt {mean_value:.0f} mm/mnd")
+            axGraph.legend()
         else:
             quarters = aggregate_to_quarters(last_pred_monthly)
             colorsPred = [color_from_nedbor(v * 4) for v in quarters]
