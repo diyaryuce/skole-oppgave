@@ -81,29 +81,16 @@
     <section class="container content-section">
       <h2>Eksempler og skjermbilder</h2>
       <figure>
-        <img src="bilder/python_graf.png" alt="Graf som viser månedlig nedbør i Bergen" class="responsive-img">
+        <img src="public/img/Figure_1.png" alt="Graf som viser månedlig nedbør i Bergen" class="responsive-img">
         <figcaption>Eksempel på graf som viser beregnet nedbør per måned.</figcaption>
       </figure>
       <figure>
-        <img src="bilder/python_kart.png" alt="Kart som viser årlig nedbør i Stor-Bergen" class="responsive-img">
+        <img src="public/img/kart.png" alt="Kart som viser årlig nedbør i Stor-Bergen" class="responsive-img">
         <figcaption>Kart med farger for ulike nedbørsmengder i Stor-Bergen.</figcaption>
       </figure>
     </section>
 
-    <section class="container content-section">
-      <h2>Kodeutdrag</h2>
-      <pre>
-# Les data og tren modellen
-df = pd.read_csv('NedborX.csv')
-poly = PolynomialFeatures(degree=3)
-X_poly = poly.fit_transform(df.drop('Nedbor', axis=1))
-X_train, X_test, Y_train, Y_test = train_test_split(X_poly, df['Nedbor'], test_size=0.25)
-
-model = LinearRegression()
-model.fit(X_train, Y_train)
-print(f"R²-verdi: {r2_score(Y_test, model.predict(X_test)):.2f}")
-      </pre>
-    </section>
+   
   </main>
 
   <!-- Footer (samme som hovedsiden) -->
