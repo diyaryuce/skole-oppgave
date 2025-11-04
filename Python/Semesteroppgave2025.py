@@ -140,10 +140,10 @@ def aggregate_to_quarters(monthly_values: Iterable[float]) -> np.ndarray:
 
 # Create the figures
 fig = plt.figure(figsize=(10, 4), facecolor=FIGURE_BG_COLOR)
-axGraph = fig.add_axes((0.05, 0.07, 0.35, 0.85))
+axGraph = fig.add_axes((0.07, 0.05, 0.3, 0.80))
 axGraph.set_facecolor(GRAPH_BG_COLOR)
-axMap = fig.add_axes((0.41, 0.07, 0.54, 0.85))
-axMode = fig.add_axes((0.96, 0.50, 0.03, 0.25))
+axMap = fig.add_axes((0.39, 0.05, 0.54, 0.85))
+axMode = fig.add_axes((0.93, 0.50, 0.03, 0.25))
 axMode.set_facecolor(FIGURE_BG_COLOR)  # Sett bakgrunnsfarge på radiobutton-området
 axMode.set_xticks([])  # Fjern x-akse
 axMode.set_yticks([])  # Fjern y-akse
@@ -167,11 +167,11 @@ for ext in extensions:
             continue
 
 if img is not None:
-    axMap.imshow(img, extent=(0, 13, 0, 10))
+    axMap.imshow(img, extent=(0, 12, 0, 10))
 else:
     # No image available; draw background color instead
     axMap.set_facecolor(MAP_BG_COLOR)
-    axMap.set_xlim(0, 13)
+    axMap.set_xlim(0, 12)
     axMap.set_ylim(0, 10)
 axMap.set_title("Årsnedbør Stor Bergen", color='white', fontsize=12, fontweight='bold')
 axGraph.set_title("Per måned", color='white', fontsize=12, fontweight='bold')
