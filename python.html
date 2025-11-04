@@ -37,50 +37,34 @@
     </div>
   </header>
 
-  <!-- Hovedinnhold -->
+
   <main>
 
     <section class="container content-section">
       <h2>Om programmet</h2>
       <p>
-        Dette Python-programmet analyserer og estimerer nedbør i Stor-Bergen ved hjelp av 
-        enkel maskinlæring (polynomregresjon). Programmet bruker 
-        datasettet NedborX.csv til å beregne en modell som vi kan bruke til forutse fremtidig årlig og månedlig nedbør.
+        Dette programmet analyserer nedbør i Stor-Bergen og gir estimerte verdier basert på enkle maskinlæringsmetoder. 
+        Ved å bruke datasettet <code>NedborX.csv</code> trenes en modell som gjør det mulig å forutsi framtidig årlig og månedlig nedbør i området.
+        Programmet gjør det også mulig for deg å klikke på kartet og se estimert nedbør for ulike steder i Stor-Bergen.
       </p>
     </section>
+    
 
-    <section class="container content-section">
-      <h2>Hvordan fungerer det?</h2>
-      <ul>
-        <li>Leser inn nedbørsdata fra <code>NedborX.csv</code>.</li>
-        <li>Trener en polynomregresjonsmodell (grad 3) fra <code>scikit-learn</code>.</li>
-        <li>Viser et kart over Stor-Bergen (fra <code>StorBergen2.png</code>).</li>
-        <li>Klikk på kartet for å estimere månedlig og årlig nedbør.</li>
-        <li>Resultatet vises i to figurer: stolpediagram og fargekart.</li>
-      </ul>
-    </section>
 
     <section class="container content-section">
       <h2>Bruksanvisning</h2>
       <ol>
-        <li>Åpne filen <code>SemesterOppgave2025.py</code> i <b>PyCharm</b> eller et annet Python-miljø.</li>
-        <li>Forsikre deg om at filene <code>NedborX.csv</code> og <code>StorBergen2.png</code> ligger i samme mappe.</li>
-        <li>Kjør programmet (Shift + F10 i PyCharm).</li>
-        <li>Klikk på et punkt på kartet for å se estimerte verdier.</li>
+        <li>Last ned filen <code>SemesterOppgave2025.py</code> og lagre den på din datamaskin.</li>
+        <li>Sørg for at filene <code>NedborX.csv</code> og <code>StorBergen2.png</code> ligger i samme mappe som programmet.</li>
+        <li>Åpne programmet i et Python-program (for eksempel PyCharm eller et annet Python-verktøy).</li>
+        <li>Start programmet ved å trykke på "Kjør" i programmet ditt.</li>
+        <li>Når kartet åpnes, kan du klikke på et punkt for å se estimerte nedbørsverdier for området.</li>
       </ol>
     </section>
-
+    
     <section class="container content-section">
-      <h2>Eksempler og skjermbilder</h2>
-      <figure>
-        <img src="public/img/Figure_2.png" alt="Graf som viser månedlig nedbør i Bergen" class="responsive-img">
-        <figcaption>Eksempel på graf som viser beregnet nedbør per måned.</figcaption>
-      </figure>
-      <figure>
-        <img src="public/img/kart.png" alt="Kart som viser årlig nedbør i Stor-Bergen" class="responsive-img">
-        <figcaption>Kart med farger for ulike nedbørsmengder i Stor-Bergen.</figcaption>
-      </figure>
-      <figure>
+      <h2>Bilde av Python-programmet
+      </h2>
         <img src="public/img/Figure_1.png" alt="Helhet Python-program som viser årlig nedbør i Stor-Bergen" class="responsive-img">
         <figcaption>Helhet Python-program som viser årlig nedbør i store Bergen <figcaption>
       </figure>
