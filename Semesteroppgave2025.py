@@ -8,6 +8,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn import preprocessing
 import matplotlib.image as mpimg
 from sklearn.preprocessing import PolynomialFeatures
+from matplotlib.patches import Patch
 
 def draw_the_map():
     # Accumulate all months to year
@@ -54,6 +55,7 @@ def on_click(event) :
     AtPointM = poly.fit_transform(AtPoint)
     y_pred = model.predict(AtPointM)
     aarsnedbor = sum(y_pred)
+
     axGraph.cla()
     draw_the_map()
     axMap.set_title(f"C: ({x:.1f},{y:.1f}) - click rød er estimert")
@@ -67,6 +69,8 @@ def on_click(event) :
     axMap.scatter(x, y, c="red", s=size_from_nedbor(aarsnedbor)*2.5, marker="o")
     axGraph.bar(months, y_pred, color=colorsPred)
     draw_label_and_ticks()
+
+    add_legend_left()
     plt.draw()
 
 def draw_label_and_ticks():
@@ -108,7 +112,25 @@ print(f"R-squared: {r_squared:.2f}")
 print('mean_absolute_error (mnd) : ', mean_absolute_error(Y_test, Y_pred))
 
 colors = [ 'orange', 'gray', 'blue', 'darkblue', 'black']
+
+legend_labels = [
+    '< 1300 mm',
+    '1300–1699 mm',
+    '1700–2499 mm',
+    '2500–3199 mm',
+    '≥ 3200 mm'
+]
+legend_handles = [Patch(color=c, label=l) for c, l in zip(colors, legend_labels)]
+
+def add_legend_left():
+    leg = axGraph.legend(handles=legend_handles, loc='upper left', frameon=True, fancybox=True)
+    leg.set_title('Årsnedbør (mm)')
+    leg.get_frame().set_facecolor('white')
+    leg.get_frame().set_edgecolor('black')
+    leg.get_frame().set_alpha(0.85)
+
 draw_the_map()
+add_legend_left()
 
 plt.connect('button_press_event', on_click)
 plt.show()

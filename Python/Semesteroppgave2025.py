@@ -12,6 +12,7 @@ from sklearn.preprocessing import PolynomialFeatures
 from matplotlib.widgets import RadioButtons
 from matplotlib.backend_bases import MouseEvent
 from typing import Iterable
+from matplotlib.patches import Patch
 
 # --- Konfigurasjon / tilstand ---
 # Fargepalett for nedbørskategorier (lav -> høy)
@@ -100,6 +101,8 @@ def on_click(event: MouseEvent) -> None:
     axMap.scatter(x, y, c=color_from_nedbor(aarsnedbor), s=size_from_nedbor(aarsnedbor) * 3.5, marker="o")
     axMap.scatter(x, y, c="red", s=size_from_nedbor(aarsnedbor)*2.5, marker="o")
     draw_label_and_ticks()
+
+    add_legend_left()
     plt.draw()
 
 def draw_label_and_ticks() -> None:
@@ -198,7 +201,24 @@ r_squared = r2_score(Y_test, Y_pred)
 print(f"R-squared: {r_squared:.2f}")
 print('mean_absolute_error (mnd) : ', mean_absolute_error(Y_test, Y_pred))
 
+legend_labels = [
+    '< 1300 mm',
+    '1300–1699 mm',
+    '1700–2499 mm',
+    '2500–3199 mm',
+    '≥ 3200 mm'
+]
+legend_handles = [Patch(color=c, label=l) for c, l in zip(COLOR_PALETTE, legend_labels)]
+
+def add_legend_left():
+    leg = axGraph.legend(handles=legend_handles, loc='upper left', frameon=True, fancybox=True)
+    leg.set_title('Årsnedbør (mm)')
+    leg.get_frame().set_facecolor('white')
+    leg.get_frame().set_edgecolor('black')
+    leg.get_frame().set_alpha(0.85)
+
 draw_the_map()
+add_legend_left()
 
 plt.connect('button_press_event', on_click)
 
@@ -241,6 +261,7 @@ def on_mode_change(label):
             quarters = aggregate_to_quarters(last_pred_monthly)
             colorsPred = [color_from_nedbor(v * 4) for v in quarters]
             axGraph.bar(np.arange(1, 5), quarters, color=colorsPred)
+    add_legend_left()
     plt.draw()
 
 radio.on_clicked(on_mode_change)
