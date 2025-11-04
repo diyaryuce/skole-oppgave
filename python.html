@@ -57,11 +57,11 @@
       <div style="background:#fff;border-radius:15px;padding:30px;box-shadow:0 4px 15px rgba(0,0,0,0.1);width:420px;">
         <h2 style="text-align:center;margin-bottom:20px;">Bruksanvisning</h2>
         <ol>
-          <li>Last ned filen <code>SemesterOppgave2025.py</code> og lagre den på datamaskinen din.</li>
-          <li>Sørg for at <code>NedborX.csv</code> og <code>StorBergen2.png</code> ligger i samme mappe som programmet.</li>
-          <li>Åpne programmet i et Python-miljø (f.eks. PyCharm).</li>
-          <li>Trykk på «Kjør» for å starte programmet.</li>
-          <li>Når kartet åpnes, kan du klikke på et punkt for å se estimerte nedbørsverdier for området.</li>
+          <li>1.Last ned filen <code>SemesterOppgave2025.py</code> og lagre den på datamaskinen din.</li>
+          <li>2.Sørg for at <code>NedborX.csv</code> og <code>StorBergen2.png</code> ligger i samme mappe som programmet.</li>
+          <li>3.Åpne programmet i et Python-miljø (f.eks. PyCharm).</li>
+          <li>4.Trykk på «Kjør» for å starte programmet.</li>
+          <li>5.Når kartet åpnes, kan du klikke på et punkt for å se estimerte nedbørsverdier for området.</li>
         </ol>
       </div>
 
@@ -78,21 +78,60 @@
 
   </main>
 
-  <!-- Footer -->
   <footer role="contentinfo">
     <div class="container">
-      <div class="footer-inner">
-        <div class="footer-copyright">
-          <p>&copy; <span id="year">2025</span> Regnbyen Bergen AS</p>
+        <div class="footer-inner">
+            <!-- About Section -->
+            <div class="footer-copyright">
+                <p>&copy; <span id="year">2025</span> Regnbyen Bergen A/S</p>
+                <p style="font-size: 0.9rem; color: #b0b0b0; line-height: 1.7;">
+                    Din guide til å leve godt i Bergen – tips om klær, bolig, bil og aktiviteter for alle årstider.
+                </p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="footer-nav-section">
+                <h3>Snarveier</h3>
+                <nav aria-label="Bunnmeny">
+                    <ul class="footer-menu">
+                        <li><a href="om-oss.html">Om oss</a></li>
+                        <li><a href="klaer.html">Klær & sko</a></li>
+                        <li><a href="hus.html">Hus</a></li>
+                        <li><a href="bil.html">Bil</a></li>
+                        <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Newsletter Subscription -->
+            <div class="footer-newsletter">
+                <h3>Motta våre tips</h3>
+                <p>Få de beste rådene for regnfulle dager direkte i innboksen din.</p>
+                <form class="newsletter-form" action="#" method="post" aria-label="Nyhetsbrev påmelding">
+                    <input 
+                        type="email" 
+                        class="newsletter-input" 
+                        placeholder="Din e-postadresse" 
+                        required 
+                        aria-label="E-postadresse"
+                    />
+                    <button type="submit" class="newsletter-btn">Abonner</button>
+                </form>
+            </div>
         </div>
-      </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; <span id="year-bottom">2025</span> Regnbyen Bergen A/S. Alle rettigheter reservert. 
+                <a href="tilgjengelighet.html" style="margin-left: 1rem;">Tilgjengelighet</a> | 
+                <a href="personvern.html">Personvern</a>
+            </p>
+        </div>
     </div>
-  </footer>
+</footer>
 
-  <script>
-    // Oppdater årstall automatisk
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
+<script src="main.js"></script>
 </body>
 </html>
+
